@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", "cursive";
+}
+
+body {
+  background: #ffe1f0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+nav a {
+  color: inherit;
+  /* 移除超連結顏色 */
+  text-decoration: none;
+  /* 移除超連結底線 */
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #c8b287;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+}
+
+
+.title {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li {
+  float: right;
+}
+
+li a {
+
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:active {
+  float: right;
+  display: block;
+  background: white;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.main {
+  padding: 80px 20px;
+  background-color: transparent;
+  height: 850px;
+
+
+}
+
+
+#text1 {
+  font-family: 'Bradley Hand ITC', sans-serif;
+  text-shadow: 4px 4px 2px #c8b287;
+  color: white;
+
+}
+
+.TITLE {
+  position: fixed;
+  top: 380px;
+  left: 90px;
+  width: 100%;
+  pointer-events: none;
+  z-index: -13px;
+  font-size: 37px;
+
+}
+
+.colorBG {
+  position: relative;
+  height: 1500px;
+  /* background-image: linear-gradient(to top, #ffe1f0,#ffa5d2); */
+
+  z-index: -9999px;
+}
+
+.TITLE_flower1 {
+  position: absolute;
+  top: 80px;
+
+  width: 100%;
+  pointer-events: none;
+  z-index: -10px;
+
+}
+
+.TITLE_flower {
+  position: absolute;
+  top: 80px;
+  padding: 0px 0px 0px 10px;
+  width: 100%;
+  pointer-events: none;
+  z-index: -10px;
+}
+
+.TITLE_note {
+  position: absolute;
+  top: 490px;
+  width: 100%;
+  pointer-events: none;
+  z-index: 999px;
+}
+
+.TITLE_note1 {
+  position: absolute;
+  top: 545px;
+  width: 100%;
+  margin: 0 auto;
+  height: 240px;
+  text-align: left;
+
+  z-index: 0px;
+  padding: 30px;
+  /* border: 4px solid rgba(0, 0, 0, 0.7); */
+  /* background: #d576a6; */
+
+}
+
+.note1_container {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+
+  z-index: 0px;
+  padding: 20px 35px;
+  /* border: 4px solid rgba(0, 0, 0, 0.7); */
+}
+
+.cover {
+  position: absolute;
+
+  top: 805px;
+  width: 100%;
+  height: 700px;
+  z-index: 18px;
+  /* background: #d576a6; */
+  background-image: linear-gradient(to top, #c8b287, #ffffff);
+}
+
+.icon_Download {
+  position: absolute;
+  width: 100%;
+  top: 1000px;
+  display: flex;
+  float: left;
+  z-index: 100;
+}
+
+.text_Download {
+  position: absolute;
+  width: 100%;
+  top: 980px;
+  display: flex;
+  float: left;
+  z-index: 100;
+}
+
+.text_Download p {
+  width: 50%;
+  position: relative;
+  float: left;
+  z-index: 100;
+  text-align: center;
+  color: #4d3912;
+  font-size: 30px;
+  text-overflow:hidden;
+}
+
+.btn_Download {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  top: 1200px;
+  flex-direction: row;
+  justify-content: Space-around;
+  display: flex;
+  float: left;
+  z-index: 100;
+}
+
+.btn_Download button {
+  position: relative;
+  width: 30%;
+  padding: 6px 10px;
+  justify-content: center;
+  display: flex;
+  float: left;
+  z-index: 100;
+  border: 2px solid #4d3912;
+  background-color: transparent;
+  border-radius: 12px;
+  color: #4d3912;
+  font-size: 15px;
+}
+.btn_Download button:active {
+  
+  background: #4d3912;
+
+  color: #ffffff;
+}
+
+.container p {
+  position: relative;
+  margin: 0px auto;
+  top: 0px;
+  text-align: center;
+  z-index: 100;
+  padding: 10px;
+  border: 4px solid rgba(0, 0, 0, 0.7);
+  animation: animate 2s linear infinite;
+}
+
+.container {
+  width: 100%;
+  position: absolute;
+  margin: 0px auto;
+  top: 840px;
+  z-index: 111;
+  padding: 20px;
+  /* border: 4px solid rgba(0, 0, 0, 0.7); */
+}
+
+@keyframes animate {
+  0% {
+    border: 4px solid #c8b28722;
+    box-shadow: 0 0 0 6px #c8b28700, 0 0 0 13px #c8b28700;
+  }
+
+  50% {
+    border: 4px solid #c8b287f7;
+    box-shadow: 0 0 0 6px #c8b28753, 0 0 0 13px #c8b28746;
+  }
+
+  100% {
+    border: 4px solid #c8b28728;
+    box-shadow: 0 0 0 6px #c8b2870c, 0 0 0 13px #c8b28707;
+  }
+}
+
+
+footer {
+  position: relative;
+  padding: 20px;
+  background: #c8b287;
+  color: white;
+  flex: 1, 0, auto;
+  width: 100%;
+  z-index: 10px;
+}
