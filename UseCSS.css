@@ -9,7 +9,17 @@ body {
   background: #bdbdbd;
   min-height: 100vh;
   overflow-x: hidden;
+  justify-content: center;
   margin: 0;
+}
+.pri_TITLE{
+  text-align: center;
+  padding: 0px 20px;
+  justify-content: center;
+
+}
+.pri_p{
+padding: 20px;
 }
 
 nav a {
@@ -67,8 +77,9 @@ li a:active {
 }
 
 .main {
+  position: relative;
   padding: 80px 20px;
-  background-color: transparent;
+  background-color: linear-gradient(to top, #a68cc8, #95c0b3);
   height: 850px;
 
 
@@ -81,14 +92,14 @@ li a:active {
 
 .TITLE {
   position: fixed;
-  /* top: 470px; */
-  top: 0px;
+  top: 430px;
+  /* top: 0px; */
   justify-content: center;
   text-align: center;
   width: 100%;
   pointer-events: none;
-  border: 2px dashed black;
-  z-index: 5;
+  border: 5px dashed black;
+  z-index: 6;
   font-size: 37px;
   color: rgb(216, 216, 216);
 }
@@ -99,7 +110,7 @@ li a:active {
   top: 100px;
   width: 100%;
   pointer-events: none;
-  z-index: 6;
+  z-index: 5;
 }
 
 .obj1 {
@@ -146,8 +157,7 @@ li a:active {
   padding: 20px;
   top: 910px;
   margin-top: 0px;
-  background-color: transparent;
-  height: 1000px;
+  background-color: #797a7c;
   z-index: 999;
   position: absolute;
 }

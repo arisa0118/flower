@@ -1,5 +1,5 @@
 <?php
-$dbConnection=mysqli_connect("localhost","root","","flower_picture");
+$dbConnection=mysqli_connect("nyxc.mysql.database.azure.com","nyxc","@Arisa0118Cassie0429","flower");
 
 //檢查連線是否成功
 if(mysqli_connect_errno()){
