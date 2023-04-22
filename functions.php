@@ -60,7 +60,7 @@ $imgData =addslashes(file_get_contents($_FILES['imgfile']['tmp_name']));
 $imageProperties = getimageSize($_FILES['imgfile']['tmp_name']);
 
 
-     $sql = "INSERT INTO `flower_picture`.`person_data`(
+     $sql = "INSERT INTO `flower`.`person_data`(
         `person_name`,
         `gender`,
         `text`,
@@ -80,15 +80,12 @@ $imageProperties = getimageSize($_FILES['imgfile']['tmp_name']);
  
     //寫入MSQL資料庫
     if(mysqli_query($dbConnection, $sql)) {
-
-    
-
         $sql = "SELECT person_id FROM person_data ORDER BY TIME LIMIT 1";
        $result = mysqli_query($dbConnection,$sql);
          $row = mysqli_fetch_assoc($result);
-        // $deleteSize=50;
-        // $delete=$row["person_id"]-$deleteSize*intval(2/$deleteSize);
-       echo $row['person_id'];
+
+        
+    //echo $row['person_id'];
         if($row['person_id']>61){
             $query2 = "DELETE FROM person_data WHERE person_id=".$row['person_id'] ;
             $query_run2 = mysqli_query($dbConnection,$query2);
