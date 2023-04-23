@@ -18,7 +18,7 @@
 
     if ($_GET['op'] == 'createOrder') {
         createOrder();
-        header("Location: /order-completed.php");
+        header("Location: https://nyxc.azurewebsites.net/order-completed.php");
     }
     function createOrder()
     {
