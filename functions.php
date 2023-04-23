@@ -62,10 +62,7 @@
                     //關閉連線
                     mysqli_close($dbConnection);
                     echo '<script>document.location.href="https://nyxc.azurewebsites.net/order-completed.php";</script>';
-                    //header("Location: https://nyxc.azurewebsites.net/order-completed.php");
-                    //exit;
-                 
-                    
+                   
                 } else {
                     $statusMsg = "File upload failed, please try again.";
                     header("Location: /");
@@ -78,9 +75,7 @@
         }
         // Display status message
         echo $statusMsg;
-        echo "1111<br>";
-        //header("Location: https://nyxc.azurewebsites.net/order-completed.php");
-        echo "2222<br>";
+      
 
 
 

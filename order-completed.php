@@ -24,7 +24,7 @@
 <div class="note1_container">
 <?php
 include_once('dbConnect.php');
-$sql = "SELECT * FROM person_data";
+$sql = "SELECT * FROM person_data ORDER BY RAND ( ) LIMIT 1  ";
 $result = mysqli_query($dbConnection,$sql);
 $row = mysqli_fetch_assoc($result);
 if($row['person_name']=="匿名"){
