@@ -18,7 +18,7 @@ $targetFilePath = $tmpname . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 $image=$targetFilePath;
 // if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
-    if(!empty($_FILES["file"]["name"])){
+    // if(!empty($_FILES["file"]["name"])){
     // Allow certain file formats
     $allowTypes = array('jpg','png','jpeg','gif','pdf');
     if(in_array($fileType, $allowTypes)){
@@ -55,10 +55,10 @@ $image=$targetFilePath;
     }else{
         $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
     }
-}else{
-    $statusMsg = 'Please select a file to upload.';
+// }else{
+    // $statusMsg = 'Please select a file to upload.';
 
-}
+// }
 // Display status message
 echo $statusMsg;
 
