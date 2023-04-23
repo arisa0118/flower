@@ -72,19 +72,19 @@ echo $statusMsg;
     //寫入MSQL資料庫
 //    if (mysqli_query($dbConnection, $sql)) {
         //找出目前第一筆資料
-        $sql = "SELECT person_id FROM person_data ORDER BY TIME LIMIT 1";
-        $result = mysqli_query($dbConnection, $sql);
-        $row = mysqli_fetch_assoc($result);
+        // $sql = "SELECT person_id FROM person_data ORDER BY TIME LIMIT 1";
+        // $result = mysqli_query($dbConnection, $sql);
+        // $row = mysqli_fetch_assoc($result);
 
         //刪除目前第一筆資料
         //echo $row['person_id'];
-        if ($row['person_id'] > 61) {
-            $query2 = "DELETE FROM person_data WHERE person_id=" . $row['person_id'];
-            $query_run2 = mysqli_query($dbConnection, $query2);
-        }
+        // if ($row['person_id'] > 61) {
+        //     $query2 = "DELETE FROM person_data WHERE person_id=" . $row['person_id'];
+        //     $query_run2 = mysqli_query($dbConnection, $query2);
+        // }
         //關閉連線
-        mysqli_close($dbConnection);
-        header("Location: /order-completed.php");
+         mysqli_close($dbConnection);
+        //header("Location: /order-completed.php");
    // } else {
       //  header("Location: /");
    // }
