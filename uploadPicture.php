@@ -21,7 +21,7 @@
         <input type="checkbox" required="required">同意使用者條款<a href="/private.php"
             style="font-size: 1px;">隱私權與條款細項</a><br><br>
 
-        <Input type="submit" class="btn_submit">
+        <Input type="submit" class="btn_submit" name="submit" value="submit">
     </form>
 
  
