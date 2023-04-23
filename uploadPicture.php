@@ -11,7 +11,7 @@
         <label for="text">你想說的話：</label>
         <input type="text" id="want_tell_text" name="want_tell_text" required="required" placeholder="我想說.."><br><br>
         <label for="image">拍一張這裡的照片：</label><br><br>
-        <input type="file" id="imgfile" name="imgfile" onchange="upload(this)" data-target="preview_img"
+        <input type="file" id="imgfile" name="imgfile" data-target="preview_img"
             accept="image/gif,image/jpeg,image/png" required="required"><br><br>
         <label for="image">預覽照片：</label><br>
         <div>
@@ -42,53 +42,7 @@
         }
         //圖片預覽script end
         //圖片裁剪
-        function upload(obj){
-            var f = obj.files[0];
-            var image = new Image();
-            fr.onload = function () {
-                //裁剪
-                image.src = this.result;
-
-                var cvs = document.createElement('canvas');
-                var ctx = cvs.getContext('2d');
-                var scale = 1;
-                image.onload = function () {
-                    var max_width = 600, max_height = 400;
-                    //如果   [宽/高]   >  [最大宽/高]
-                    if (image.width / image.height >= max_width / max_height) {
-                        //如果 [宽]>[最大宽] 
-                        if (image.width > max_width) {
-                            cvs.width = max_width;
-                            cvs.height = (image.height * max_width) / image.width;
-                        } else {
-                            cvs.width = image.width;
-                            cvs.height = image.height;
-                        }
-                    } else {
-                        //如果 [高]>[最大高] 
-                        if (image.height > max_height) {
-                            cvs.height = max_height;
-                            cvs.width = (image.width * max_height) / image.height;
-                        } else {
-                            cvs.width = image.width;
-                            cvs.height = image.height;
-                        }
-                    }
-  
-                
-                    var mpImg = new MegaPixImage(image);
-                    mpImg.render(cvs, {
-                        maxWidth: 600,
-                        maxHeight: 400,
-                        quality: 0.8,
-                        orientation: Orientation
-                    });
-                    //得到裁剪后base64位图片
-                    var newImageData = cvs.toDataURL("image/jpeg", 0.8);
-                    //ajax传到后台处理
-                }
-
-            } 
+        
             //圖片裁剪end
     </script>
     

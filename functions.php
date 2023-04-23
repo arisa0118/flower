@@ -1,5 +1,5 @@
 <?php include_once('header.php');
-
+include('dbConnect.php');
 if ($_GET['op'] == 'createOrder') {
     createOrder();
 }
@@ -19,16 +19,16 @@ function createOrder()
 
 
     if (is_uploaded_file($tmpname)) {
-
-        if ($_FILES['imgfile']['error'] == 0) {
-            $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
-        } else {
-            die("Unable to upload");
+        if (isset($_FILES['imgfile']['error'])) {
+            if ($_FILES['imgfile']['error'] == 0) {
+                $image = addslashes(file_get_contents($_FILES['imgfile']['tmp_name']));
+            } else {
+                die("Unable to upload");
+            }
         }
 
-
         //新添加一筆資料(準備)
-        $sql = "INSERT INTO person_data(
+        $sql = "INSERT INTO person_data (
         `person_name`,
         `gender`,
         `text`,
