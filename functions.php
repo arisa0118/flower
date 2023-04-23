@@ -39,13 +39,15 @@ if(isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])){
     // $allowTypes = array('jpg','png','jpeg','gif','pdf');
     //if(in_array($fileType, $allowTypes)){
         // Upload file to server
+       $image = addslashes(file_get_contents($tmpname));
         if(move_uploaded_file($_FILES["imgfile"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
-            $image = addslashes(file_get_contents($tmpname));
+         
             $sql = "SELECT person_id FROM person_data ORDER BY TIME LIMIT 1";
         // $result = mysqli_query($dbConnection, $sql);
         // $row = mysqli_fetch_assoc($result);
             echo '45行 <br>';
+            
             $sql = "INSERT INTO person_data (
                 `person_name`,
                 `gender`,
@@ -58,10 +60,11 @@ if(isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])){
                     '{$_POST['person_name']}',
                     '{$_POST['gender']}',
                     '{$_POST['want_tell_text']}',
-                    $image,
+                    '{$image}',
                     $fileName,
                     $fileType,
                     '" . date('Y-m-d H:i:s') . "')";
+                    echo $sql;
             echo '62行 <br>';
             //$insert =mysqli_query($dbConnection, $sql);
             echo '64行 <br>';
