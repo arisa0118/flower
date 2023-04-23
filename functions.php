@@ -18,6 +18,7 @@
 
     if ($_GET['op'] == 'createOrder') {
         createOrder();
+        header("Location: /order-completed.php");
     }
     function createOrder()
     {
@@ -74,7 +75,7 @@
                     }
                     //關閉連線
                     mysqli_close($dbConnection);
-                    header("Location: /order-completed.php");
+                    
                 } else {
                     $statusMsg = "File upload failed, please try again.";
                     header("Location: /");
