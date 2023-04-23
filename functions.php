@@ -16,7 +16,7 @@ $fileName = basename($_FILES["imgfile"]["name"]);
 $targetFilePath = $tmpname . $fileName;
 //檔案類型
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
-$image=$targetFilePath;
+
 if(isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])){
     // if(!empty($_FILES["file"]["name"])){
     // Allow certain file formats
@@ -25,6 +25,7 @@ if(isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])){
         // Upload file to server
         if(move_uploaded_file($_FILES["imgfile"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
+            $image = addslashes(file_get_contents($tmpname));
             $sql = "INSERT INTO person_data (
                 `person_name`,
                 `gender`,
@@ -69,7 +70,7 @@ echo $statusMsg;
         
 
     //寫入MSQL資料庫
-    if (mysqli_query($dbConnection, $sql)) {
+//    if (mysqli_query($dbConnection, $sql)) {
         //找出目前第一筆資料
         $sql = "SELECT person_id FROM person_data ORDER BY TIME LIMIT 1";
         $result = mysqli_query($dbConnection, $sql);
@@ -84,9 +85,9 @@ echo $statusMsg;
         //關閉連線
         mysqli_close($dbConnection);
         header("Location: /order-completed.php");
-    } else {
-        header("Location: /");
-    }
+   // } else {
+      //  header("Location: /");
+   // }
 
 }
 ?>
