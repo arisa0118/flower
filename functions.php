@@ -11,19 +11,19 @@ function createOrder()
     $tmpname = $_FILES['imgfile']['tmp_name'];
    
     //檔名(包含附檔名)
-$fileName = basename($_FILES["file"]["name"]);
+$fileName = basename($_FILES["imgfile"]["name"]);
  //暫存位置
 $targetFilePath = $tmpname . $fileName;
 //檔案類型
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 $image=$targetFilePath;
-// if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
+if(isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])){
     // if(!empty($_FILES["file"]["name"])){
     // Allow certain file formats
-    // $allowTypes = array('jpg','png','jpeg','gif','pdf');
-    // if(in_array($fileType, $allowTypes)){
+     $allowTypes = array('jpg','png','jpeg','gif','pdf');
+    if(in_array($fileType, $allowTypes)){
         // Upload file to server
-        if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
+        if(move_uploaded_file($_FILES["imgfile"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
             $sql = "INSERT INTO person_data (
                 `person_name`,
@@ -52,13 +52,13 @@ $image=$targetFilePath;
         }else{
             $statusMsg = "Sorry, there was an error uploading your file.";
         }
-    // }else{
-    //     $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
-    // }
-// }else{
-    // $statusMsg = 'Please select a file to upload.';
+     }else{
+         $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
+    }
+}else{
+    $statusMsg = 'Please select a file to upload.';
 
-// }
+}
 // Display status message
 echo $statusMsg;
 

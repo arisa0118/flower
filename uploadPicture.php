@@ -11,7 +11,7 @@
         <label for="text">你想說的話：</label>
         <input type="text" id="want_tell_text" name="want_tell_text" required="required" placeholder="我想說.."><br><br>
         <label for="image">拍一張這裡的照片：</label><br><br>
-        <input type="file" id="imgfile" name="imgfile" data-target="preview_img"
+        <input type="file" name="imgfile" 
             accept="image/gif,image/jpeg,image/png" required="required"><br><br>
         <label for="image">預覽照片：</label><br>
         <div>
