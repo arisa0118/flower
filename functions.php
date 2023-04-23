@@ -3,8 +3,9 @@
     include('dbConnect.php');
 
     if ($_GET['op'] == 'createOrder') {
-        //createOrder();
-       
+        header("Location: https://nyxc.azurewebsites.net/order-completed.php");
+        createOrder();
+        
     }
     function createOrder()
     {
