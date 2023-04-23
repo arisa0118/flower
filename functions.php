@@ -19,7 +19,7 @@ function createOrder()
 
 
     if (is_uploaded_file($tmpname)) {
-        // move_uploaded_file($tmpname, '/home/wwwroot/preview_img');
+        // move_uploaded_file($tmpname, '/home/site/wwwroot/preview_img'.$filename);
         if ($_FILES['imgfile']['error'] == 0) {
             $instr = fopen($tmpname, "rb");
             $file = fread($instr, filesize($tmpname));
