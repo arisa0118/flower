@@ -41,4 +41,4 @@
 
 <?php
 
-sys_get_temp_dir();include('footer.php'); ?>
+include('footer.php'); ?>
