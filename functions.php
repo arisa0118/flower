@@ -1,4 +1,4 @@
-<?php include_once('header.php');
+<?php //include_once('header.php');
 include('dbConnect.php');
 if ($_GET['op'] == 'createOrder') {
     createOrder();
