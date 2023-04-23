@@ -1,5 +1,5 @@
 <?php
-if ( ini_set( 'upload_tmp_dir', '/home/site/wwwroot/preview_img' ) === false ) throw new \Exception( 'Unable to set upload_tmp_dir.' );
+if ( ini_set( 'upload_tmp_dir', '/home/site/wwwroot/preview_img' ) === false ) die( 'Unable to set upload_tmp_dir.' );
 
 $db_hostname = "nyxc.mysql.database.azure.com";
 $db_username = "nyxc";
