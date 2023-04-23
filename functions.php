@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <?php //include_once('header.php');
+    <?php include_once('header.php');
     include('dbConnect.php');
 
     if ($_GET['op'] == 'createOrder') {
@@ -60,6 +60,7 @@
                 $insert = mysqli_query($dbConnection, $sql);
                 if ($insert) {
                     $statusMsg = "The file " . $fileName . " has been uploaded successfully.";
+
                     //找出目前第一筆資料
                     $sql = "SELECT person_id FROM person_data ORDER BY TIME LIMIT 1";
                     $result = mysqli_query($dbConnection, $sql);
