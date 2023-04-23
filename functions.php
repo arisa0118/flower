@@ -22,8 +22,8 @@ function createOrder()
         if (isset($_FILES['imgfile']['error'])) {
             if ($_FILES['imgfile']['error'] == 0) {
                 $image = addslashes(file_get_contents($_FILES['imgfile']['tmp_name']));
-            } else {
-                die("Unable to upload");
+            } else if($_FILES['imgfile']['error'] == 2) {
+                die("Sorry, your file is too large.");
             }
         }
 
