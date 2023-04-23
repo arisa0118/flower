@@ -43,36 +43,36 @@ if(isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])){
             // Insert image file name into database
             $image = addslashes(file_get_contents($tmpname));
             $sql = "SELECT person_id FROM person_data ORDER BY TIME LIMIT 1";
-        $result = mysqli_query($dbConnection, $sql);
-        $row = mysqli_fetch_assoc($result);
+        // $result = mysqli_query($dbConnection, $sql);
+        // $row = mysqli_fetch_assoc($result);
             echo '45行 <br>';
-            // $sql = "INSERT INTO person_data (
-            //     `person_name`,
-            //     `gender`,
-            //     `text`,
-            //     `image_data`,
-            //     `image_name`, 
-            //     `image_type`,
-            //     `time`
-            //     ) VALUES (
-            //         '{$_POST['person_name']}',
-            //         '{$_POST['gender']}',
-            //         '{$_POST['want_tell_text']}',
-            //         $image,
-            //         $fileName,
-            //         $fileType,
-            //         '" . date('Y-m-d H:i:s') . "')";
+            $sql = "INSERT INTO person_data (
+                `person_name`,
+                `gender`,
+                `text`,
+                `image_data`,
+                `image_name`, 
+                `image_type`,
+                `time`
+                ) VALUES (
+                    '{$_POST['person_name']}',
+                    '{$_POST['gender']}',
+                    '{$_POST['want_tell_text']}',
+                    $image,
+                    $fileName,
+                    $fileType,
+                    '" . date('Y-m-d H:i:s') . "')";
             echo '62行 <br>';
-            // $insert =mysqli_query($dbConnection, $sql);
+            //$insert =mysqli_query($dbConnection, $sql);
             echo '64行 <br>';
-            // $insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
-            // if($insert){
-            //     echo '67行 <br>';
-            //     $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-            // }else{
-            //     echo '70行 <br>';
-            //     $statusMsg = "File upload failed, please try again.";
-            // } 
+             $insert = $dbConnection->query($sql);
+            if($insert){
+                echo '67行 <br>';
+                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
+            }else{
+                echo '70行 <br>';
+                $statusMsg = "File upload failed, please try again.";
+            } 
         }else{
             $statusMsg = "Sorry, there was an error uploading your file.";
         }
