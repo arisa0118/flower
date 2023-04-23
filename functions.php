@@ -17,8 +17,8 @@
     include('dbConnect.php');
 
     if ($_GET['op'] == 'createOrder') {
-        createOrder();
-        header("Location: https://nyxc.azurewebsites.net/order-completed.php");
+        //createOrder();
+       
     }
     function createOrder()
     {
@@ -75,6 +75,7 @@
                     }
                     //關閉連線
                     mysqli_close($dbConnection);
+                    //header("Location: https://nyxc.azurewebsites.net/order-completed.php");
                     
                 } else {
                     $statusMsg = "File upload failed, please try again.";
@@ -88,6 +89,9 @@
         }
         // Display status message
         echo $statusMsg;
+        echo "1111<br>";
+        header("Location: https://nyxc.azurewebsites.net/order-completed.php");
+        echo "2222<br>";
 
 
 
