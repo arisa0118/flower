@@ -1,4 +1,5 @@
-<?php include('header.php'); ?>
+<?php include('header.php');
+ ?>
 <div class="obj1">
     
     <img src="img\mountain_top.PNG" id="mountain_top">
@@ -38,4 +39,6 @@
 			<p>點擊注入能量</p>
 		</div>
 
-<?php include('footer.php'); ?>
+<?php
+
+sys_get_temp_dir();include('footer.php'); ?>
