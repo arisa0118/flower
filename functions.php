@@ -5,29 +5,29 @@ if ($_GET['op'] == 'createOrder') {
 }
 function createOrder()
 {
+
     global $dbConnection;
     //取得上傳檔案資訊
-    $filename = $_FILES['imgfile']['name'];
+    //檔名(包含附檔名)
+    $imagename = $_FILES['imgfile']['name'];
+    //暫存位置
     $tmpname = $_FILES['imgfile']['tmp_name'];
-    $filetype = $_FILES['imgfile']['type'];
-    $filesize = $_FILES['imgfile']['size'];
-    $imageProperties = getimageSize($_FILES['imgfile']['tmp_name']);
-    $file = NULL;
-
-
-    //儲存2
+    //檔案類型
+    $imagetype = $_FILES['imgfile']['type'];
+    //檔案大小
+    $imagesize = $_FILES['imgfile']['size'];
 
 
     if (is_uploaded_file($tmpname)) {
-        // move_uploaded_file($tmpname, '/home/site/wwwroot/preview_img'.$filename);
+
         if ($_FILES['imgfile']['error'] == 0) {
-            $instr = fopen($tmpname, "rb");
-            $file = fread($instr, filesize($tmpname));
+            $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
+        } else {
+            die("Unable to upload");
         }
-        // $imgData =addslashes(file_get_contents($_FILES['imgfile']['tmp_name']));
-        $imgData = file_get_contents($file);
 
 
+        //新添加一筆資料(準備)
         $sql = "INSERT INTO person_data(
         `person_name`,
         `gender`,
@@ -40,25 +40,26 @@ function createOrder()
             '{$_POST['person_name']}',
             '{$_POST['gender']}',
             '{$_POST['want_tell_text']}',
-            $imgData,
-            $filename,
-            $filetype,
+            $image,
+            $imagename,
+            $imagetype,
             '" . date('Y-m-d H:i:s') . "')";
     }
 
     //寫入MSQL資料庫
     if (mysqli_query($dbConnection, $sql)) {
-
+        //找出目前第一筆資料
         $sql = "SELECT person_id FROM person_data ORDER BY TIME LIMIT 1";
         $result = mysqli_query($dbConnection, $sql);
         $row = mysqli_fetch_assoc($result);
 
-
+        //刪除目前第一筆資料
         //echo $row['person_id'];
         if ($row['person_id'] > 61) {
             $query2 = "DELETE FROM person_data WHERE person_id=" . $row['person_id'];
             $query_run2 = mysqli_query($dbConnection, $query2);
         }
+        //關閉連線
         mysqli_close($dbConnection);
         header("Location: /order-completed.php");
     } else {

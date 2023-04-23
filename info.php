@@ -1,1 +1,1 @@
-echo "<?php phpinfo();?>
+echo <?php phpinfo();?>
