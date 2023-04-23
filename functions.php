@@ -17,7 +17,8 @@ $targetFilePath = $tmpname . $fileName;
 //檔案類型
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 $image=$targetFilePath;
-if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
+// if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
+    if(!empty($_FILES["file"]["name"])){
     // Allow certain file formats
     $allowTypes = array('jpg','png','jpeg','gif','pdf');
     if(in_array($fileType, $allowTypes)){
