@@ -1,5 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="UseCSS.css" rel="stylesheet">
+	<title>
+		flower
+	</title>
+	
+</head>
+
+<body>
 <?php //include_once('header.php');
 include('dbConnect.php');
+
 if ($_GET['op'] == 'createOrder') {
     createOrder();
 }
