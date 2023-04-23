@@ -61,8 +61,10 @@
                     }
                     //關閉連線
                     mysqli_close($dbConnection);
-                    header("Location: https://nyxc.azurewebsites.net/order-completed.php");
-                    exit;
+                    echo '<script>document.location.href="https://nyxc.azurewebsites.net/order-completed.php";</script>';
+                    //header("Location: https://nyxc.azurewebsites.net/order-completed.php");
+                    //exit;
+                 
                     
                 } else {
                     $statusMsg = "File upload failed, please try again.";
@@ -77,7 +79,7 @@
         // Display status message
         echo $statusMsg;
         echo "1111<br>";
-        header("Location: https://nyxc.azurewebsites.net/order-completed.php");
+        //header("Location: https://nyxc.azurewebsites.net/order-completed.php");
         echo "2222<br>";
 
 
