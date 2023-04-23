@@ -42,6 +42,7 @@ if(isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])){
         if(move_uploaded_file($_FILES["imgfile"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
             $image = addslashes(file_get_contents($tmpname));
+            echo '45行 <br>';
             $sql = "INSERT INTO person_data (
                 `person_name`,
                 `gender`,
@@ -58,12 +59,15 @@ if(isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])){
                     $fileName,
                     $fileType,
                     '" . date('Y-m-d H:i:s') . "')";
-            
+            echo '62行 <br>';
             $insert =mysqli_query($dbConnection, $sql);
+            echo '64行 <br>';
             // $insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
             if($insert){
+                echo '67行 <br>';
                 $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
             }else{
+                echo '70行 <br>';
                 $statusMsg = "File upload failed, please try again.";
             } 
         }else{
@@ -76,6 +80,7 @@ if(isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])){
     $statusMsg = 'Please select a file to upload.';
 
 }
+echo '83行 <br>';
 // Display status message
 echo $statusMsg;
 
