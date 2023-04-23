@@ -7,45 +7,65 @@ function createOrder()
 {
 
     global $dbConnection;
-    //取得上傳檔案資訊
-    //檔名(包含附檔名)
-    $imagename = $_FILES['imgfile']['name'];
-    //暫存位置
+
     $tmpname = $_FILES['imgfile']['tmp_name'];
-    //檔案類型
-    $imagetype = $_FILES['imgfile']['type'];
-    //檔案大小
-    $imagesize = $_FILES['imgfile']['size'];
-
-
-    if (is_uploaded_file($tmpname)) {
-        if (isset($_FILES['imgfile']['error'])) {
-            if ($_FILES['imgfile']['error'] == 0) {
-                echo 'fail to '.$tmpname.$imagename;
-                $image = addslashes(file_get_contents($_FILES['imgfile']['tmp_name']));
-            } else if($_FILES['imgfile']['error'] == 2) {
-                die("Sorry, your file is too large.");
-            }
+   
+    //檔名(包含附檔名)
+$fileName = basename($_FILES["file"]["name"]);
+ //暫存位置
+$targetFilePath = $tmpname . $fileName;
+//檔案類型
+$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+$image=$targetFilePath;
+if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
+    // Allow certain file formats
+    $allowTypes = array('jpg','png','jpeg','gif','pdf');
+    if(in_array($fileType, $allowTypes)){
+        // Upload file to server
+        if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
+            // Insert image file name into database
+            $sql = "INSERT INTO person_data (
+                `person_name`,
+                `gender`,
+                `text`,
+                `image_data`,
+                `image_name`, 
+                `image_type`,
+                `time`
+                ) VALUES (
+                    '{$_POST['person_name']}',
+                    '{$_POST['gender']}',
+                    '{$_POST['want_tell_text']}',
+                    $image,
+                    $fileName,
+                    $fileType,
+                    '" . date('Y-m-d H:i:s') . "')";
+            
+            $insert =mysqli_query($dbConnection, $sql);
+            // $insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
+            if($insert){
+                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
+            }else{
+                $statusMsg = "File upload failed, please try again.";
+            } 
+        }else{
+            $statusMsg = "Sorry, there was an error uploading your file.";
         }
+    }else{
+        $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
+    }
+}else{
+    $statusMsg = 'Please select a file to upload.';
+
+}
+// Display status message
+echo $statusMsg;
+
+
+
 
         //新添加一筆資料(準備)
-        $sql = "INSERT INTO person_data (
-        `person_name`,
-        `gender`,
-        `text`,
-        `image_data`,
-        `image_name`, 
-        `image_type`,
-        `time`
-        ) VALUES (
-            '{$_POST['person_name']}',
-            '{$_POST['gender']}',
-            '{$_POST['want_tell_text']}',
-            $image,
-            $imagename,
-            $imagetype,
-            '" . date('Y-m-d H:i:s') . "')";
-    }
+        
 
     //寫入MSQL資料庫
     if (mysqli_query($dbConnection, $sql)) {
