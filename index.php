@@ -1,44 +1,86 @@
-<?php include('header.php');
- ?>
-<div class="obj1">
+<?php include_once('dbConnect.php');?>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="UseCSS1.css" rel="stylesheet">
+	<title>
+		flower
+	</title>
+	
+</head>
+
+<body>
+	<nav>
+		<ul class="clientMenu1">
+		<li class="title">flower</li>
+		<li><a href="/">home</a></li>
+		<li><a href="/#flower_intro_call">About</a></li>
+	</ul>
+	</nav>
+    <div class="content">
+  
+<div class="black-white_1layer" id="flower_intro_call">
     
-    <img src="img\mountain_top.PNG" id="mountain_top">
+    <img src="img\black-white_1layer.PNG" width="100%" >
     
 </div>
-<div class="TITLE">
+<div class="black-white_2_5layer">
     
-<h1 id="text">Flower</h1>
-
+  
+    </div>
+<div class="black-white_2layer" >
+    
+    <img src="img\black-white_2layer.PNG" width="100%" >
+    
 </div>
-<div class="TITLE_flower">
-<img src="img\flowers.PNG" id="flowers" width="100%">
+<div class="black-white_3layer">
+    
+    <img src="img\black-white_3layer.PNG" width="100%">
+    
 </div>
-<div class="flower_cover">
+<div class="black-white_0layer" id="black-white_0layer">
+    
+    <img src="img\black-white_0layer.PNG" width="100%" >
+    <a href="/uploadPicture.php"><div class="ring"></div></a>
+	<p>點擊注入能量</p>
+    
+</div>	
+ 
+   
+    </div>
 
-</div>
+<script>
 
-<div class="obj1" style="top: -3px;">
-<img src="img\mountain_bottom.PNG" id="mountain_bottom">
-</div>
-<div class="flower_intro_call" id="flower_intro_call">
+let black_white_0layer = document.getElementById('black-white_0layer');
+let black_white_1layer = document.getElementById('black-white_1layer');
+let black_white_2layer = document.getElementById('black-white_2layer');
 
-</div>
-<div class="flower_intro" >
-    <h1 style="padding:10px; color: white;">花朵計畫</h1>
-    <p style="padding:15px; color: white;">
-        這是一朵象徵著關渡生命力的花，在歲月的長河中，許多關於這裡的記憶不斷被新環境的訊號洗去，花朵也隨之失去了生機，請助我們一臂之力將新的生命力重新注入花朵中！<br><br>
-        您可以拍攝記錄下對於這個地方最美好的記憶，並將照片上傳至下方的花朵上！<br><br>
+window.addEventListener('load', ()=>{
+// 	black_white_0layer.style.top =Math.round( 1200/320*(screen.width))+ 'px';
+//  black_white_1layer.style.top = Math.round( 348/320*(screen.width))+ 'px';
 
-    </p>
-</div>
-<div class="flower_PNG">
-<img src="img\flower.PNG" width="100%">
-</div>
-<div class="container">
-			<a href="/uploadPicture.php"><div class="ring"></div></a>
-			<p>點擊注入能量</p>
-		</div>
+});
+// window.addEventListener('scroll', ()=>{
+// 	let value = window.scrollY;
 
-<?php
+// 	black_white_0layer.style.marginTop = value * 2.5+ 'px';
+// 	black_white_1layer.style.top = value * -1.5+  'px';
+// 	black_white_2layer.style.top = value * 1.5+  'px';
+// });
 
-include('footer.php'); ?>
+</script>
+
+
+
+<footer>
+	
+	<p>&copy;&thinsp;<?php echo date('Y')?>&thinsp;nyxc 版權所有 不得轉載</p>
+</footer>
+
+</body>
+
+</html>
