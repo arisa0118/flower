@@ -16,8 +16,8 @@
         //檔名(包含附檔名)
         $fileName = basename($_FILES["imgfile"]["name"]);
         //暫存位置
-        $tmpname2="/home/site/wwwroot/collect_img/";
-        $targetFilePath = $tmpname2 . $fileName;
+      
+        $targetFilePath = $tmpname . $fileName;
         //檔案類型
         $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
