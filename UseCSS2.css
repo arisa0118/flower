@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", "cursive";
+}
+
+body {
+  background: #bdbdbd;
+  min-height: 100vh;
+  overflow-x: hidden;
+  justify-content: center;
+  margin: 0;
+}
+.pri_TITLE{
+  text-align: center;
+  padding: 0px 20px;
+  justify-content: center;
+
+}
+.pri_p{
+padding: 20px;
+}
+
+nav a {
+  color: inherit;
+  /* 移除超連結顏色 */
+  text-decoration: none;
+  /* 移除超連結底線 */
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  background-color: rgba(51, 51, 51, 0.563);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+}
+
+
+.title {
+  float: left;
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li {
+  float: right;
+}
+
+li a {
+
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:active {
+  float: right;
+  display: block;
+  background: rgb(0, 0, 0);
+  color: rgb(51, 51, 51);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.main {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom:60px;
+  background-color: linear-gradient(to top, #a68cc8, #95c0b3);
+  height: 850px;
+
+
+}
+
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid black;
+  background: transparent;
+}
+
+.btn_submit {
+  padding: 10px 24px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid rgb(51, 51, 51);
+  background: transparent;
+
+}
+
+.btn_submit:hover {
+  background-color: rgb(51, 51, 51);
+  color: white;
+}
+
+
+footer {
+  padding: 20px;
+  background: rgb(51, 51, 51);
+  color: white;
+  flex: 1, 0, auto;
+  width: 100%;
+ z-index: 9;
+}
+
+
+@media screen and (min-width:393px){ 
+  
+  
+}
+
+@media screen and (min-width:1000px){ 
+
+}

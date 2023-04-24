@@ -21,7 +21,7 @@
 		<li><a href="/#flower_intro_call">About</a></li>
 	</ul>
 	</nav>
-    <div class="content">
+    <div class="content"></div>
   
 <div class="black-white_1layer" id="flower_intro_call">
     
@@ -49,9 +49,6 @@
 	<p>點擊注入能量</p>
     
 </div>	
- 
-   
-    </div>
 
 <script>
 

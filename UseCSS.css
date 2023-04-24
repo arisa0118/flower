@@ -12,7 +12,15 @@ body {
   justify-content: center;
   margin: 0;
 }
+.pri_TITLE{
+  text-align: center;
+  padding: 0px 20px;
+  justify-content: center;
 
+}
+.pri_p{
+padding: 20px;
+}
 
 nav a {
   color: inherit;
@@ -22,12 +30,12 @@ nav a {
 
 }
 
-.clientMenu1{
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0px;
   overflow: hidden;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(51, 51, 51);
   position: fixed;
   top: 0;
   width: 100%;

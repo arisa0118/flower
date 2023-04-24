@@ -1,7 +1,31 @@
-<?php include('header.php');
+<?php include_once('dbConnect.php');?>
+<!DOCTYPE html>
+<html>
 
-?>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="UseCSS2.css" rel="stylesheet">
+	<title>
+		flower
+	</title>
+	
+</head>
+
+<body>
+	<nav>
+		<ul class="clientMenu">
+		<li class="title">flower</li>
+		<li><a href="/">home</a></li>
+		<li><a href="/#flower_intro_call">About</a></li>
+	</ul>
+	</nav>
+
+	
 <div class="main">
+
+
     <form action="functions.php?op=createOrder" method="post" enctype="multipart/form-data">
         <label for="text">名稱：</label>
         <input type="text" id="person_name" name="person_name" value="匿名" required="required"><br><br>
@@ -41,13 +65,16 @@
             }
         }
         //圖片預覽script end
-        //圖片裁剪
         
-            //圖片裁剪end
     </script>
     
 </div>
-<?php include('footer.php');
+<footer>
+	
+	<p>&copy;&thinsp;<?php echo date('Y')?>&thinsp;nyxc 版權所有 不得轉載</p>
+</footer>
 
-//參考:預覽照片https://www.youtube.com/watch?v=hUphKQ8uXVo
-?>
+
+</body>
+
+</html>
