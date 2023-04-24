@@ -16,16 +16,16 @@
         //檔名(包含附檔名)
         $fileName = basename($_FILES["imgfile"]["name"]);
         //暫存位置
-        $targetFilePath = $tmpname . $fileName;
+        $tmpname2="/home/site/wwwroot/collect_img/";
+        $targetFilePath = $tmpname2 . $fileName;
         //檔案類型
         $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
         if (isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])) {
             //檔案內容
             $image = addslashes(file_get_contents($tmpname));
-            $uploads_dir = '/collect_img';
-          
-            if (move_uploaded_file($_FILES["imgfile"]["tmp_name"],"$uploads_dir/$fileName" )) {
+            
+            if (move_uploaded_file($_FILES["imgfile"]["tmp_name"], $targetFilePath)) {
                 // Insert image file name into database
                 //新添加一筆資料(準備)
                 $sql = "INSERT INTO person_data (
