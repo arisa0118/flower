@@ -15,7 +15,7 @@
 
         //檔名(包含附檔名)
         //$fileName = basename($_FILES["imgfile"]["name"]);
-        $fileName = $_FILES["imgfile"]["name"];
+        $fileName = date('Y-m-d H:i:s').$_FILES["imgfile"]["name"];
         //暫存位置
       
         $targetFilePath = $tmpname . $fileName;
@@ -27,6 +27,7 @@
             $image = addslashes(file_get_contents($tmpname));
             if (move_uploaded_file($_FILES["imgfile"]["tmp_name"], $targetFilePath)) {
             // if (move_uploaded_file($_FILES["imgfile"]["tmp_name"], $targetFilePath)) {
+                $fileName = date('Y-m-d H:i:s').$_FILES["imgfile"]["name"];
                 // Insert image file name into database
                 //新添加一筆資料(準備)
                 $sql = "INSERT INTO person_data (
