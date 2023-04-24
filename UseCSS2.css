@@ -6,21 +6,14 @@
 }
 
 body {
-  background: #bdbdbd;
+  background: linear-gradient(to bottom, #a6b1d3 30%, #c086a2 70%);
   min-height: 100vh;
   overflow-x: hidden;
   justify-content: center;
   margin: 0;
+  color: white;
 }
-.pri_TITLE{
-  text-align: center;
-  padding: 0px 20px;
-  justify-content: center;
 
-}
-.pri_p{
-padding: 20px;
-}
 
 nav a {
   color: inherit;
@@ -35,7 +28,7 @@ ul {
   margin: 0;
   padding: 0px;
   overflow: hidden;
-  background-color: rgba(51, 51, 51, 0.563);
+  background-color: rgba(0, 0, 0, 0.496);
   position: fixed;
   top: 0;
   width: 100%;
@@ -47,7 +40,7 @@ ul {
 .title {
   float: left;
   display: block;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -60,7 +53,7 @@ li {
 li a {
 
   display: block;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -69,8 +62,8 @@ li a {
 li a:active {
   float: right;
   display: block;
-  background: rgb(0, 0, 0);
-  color: rgb(51, 51, 51);
+  background: rgba(255, 255, 255, 0.447);
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -78,45 +71,69 @@ li a:active {
 
 .main {
   position: relative;
-  padding-top: 60px;
-  padding-bottom:60px;
-  background-color: linear-gradient(to top, #a68cc8, #95c0b3);
-  height: 850px;
+  padding: 60px 20px;
+
 
 
 }
 
+label{
+  color: white;
+}
+input[type=file] {
+  color: white;
 
+  }
+  .want_tell_text {
+ 
+  
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 12px 10px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-image:url("/img/text_box.PNG");
+      font-size: 16px;
+      resize: none;
+    }
 input[type=text] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgb(255, 255, 255);
   background: transparent;
+  color: white;
 }
 
 .btn_submit {
+  display: flex;
+  justify-content: center;
   padding: 10px 24px;
   text-align: center;
   font-size: 16px;
   border-radius: 8px;
-  border: 2px solid rgb(51, 51, 51);
-  background: transparent;
+  border: none;
+  background:  rgb(255, 255, 255);
+  color: #c086a2;
+   font-weight: bold;
 
 }
 
 .btn_submit:hover {
-  background-color: rgb(51, 51, 51);
+  background-color: #a6b1d3;
   color: white;
 }
 
 
 footer {
-  padding: 20px;
-  background: rgb(51, 51, 51);
-  color: white;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.534);
+  color: rgb(255, 255, 255);
   flex: 1, 0, auto;
   width: 100%;
  z-index: 9;

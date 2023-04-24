@@ -22,8 +22,8 @@
         $targetFilePath = $tmpname . $fileName;
         //檔案類型
         $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-
-        if (isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])) {
+        //isset($_POST["submit"]) && 
+        if (!empty($_FILES["imgfile"]["name"])) {
             //檔案內容
             $image = addslashes(file_get_contents($tmpname));
             if (move_uploaded_file($_FILES["imgfile"]["tmp_name"],iconv("utf-8", "big5",$targetFilePath) )) {
