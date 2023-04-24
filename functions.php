@@ -24,8 +24,8 @@
         if (isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])) {
             //檔案內容
             $image = addslashes(file_get_contents($tmpname));
-            
-            if (move_uploaded_file($_FILES["imgfile"]["tmp_name"], $targetFilePath)) {
+            if (move_uploaded_file($_FILES["imgfile"]["tmp_name"], "preview_img/$tmpname")) {
+            // if (move_uploaded_file($_FILES["imgfile"]["tmp_name"], $targetFilePath)) {
                 // Insert image file name into database
                 //新添加一筆資料(準備)
                 $sql = "INSERT INTO person_data (
