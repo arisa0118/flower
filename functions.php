@@ -1,6 +1,6 @@
 
     <?php include_once('header.php');
-    include('dbConnect.php');
+    include_once('dbConnect.php');
 
     if ($_GET['op'] == 'createOrder') {
         createOrder();
@@ -15,8 +15,9 @@
 
         //檔名(包含附檔名)
         //$fileName = basename($_FILES["imgfile"]["name"]);
-        $fileName = date('Y-m-d H:i:s').$_FILES["imgfile"]["name"];
-        //暫存位置
+        $fileName = explode(date('Y-m-d H:i:s'),$_FILES["imgfile"]["name"]);
+
+        //暫存位置'preview_img/'.$row["image_name"]
       
         $targetFilePath = $tmpname . $fileName;
         //檔案類型
@@ -25,7 +26,7 @@
         if (isset($_POST["submit"]) && !empty($_FILES["imgfile"]["name"])) {
             //檔案內容
             $image = addslashes(file_get_contents($tmpname));
-            if (move_uploaded_file($_FILES["imgfile"]["tmp_name"], $targetFilePath)) {
+            if (move_uploaded_file($_FILES["imgfile"]["tmp_name"],iconv("utf-8", "big5",$targetFilePath) )) {
             // if (move_uploaded_file($_FILES["imgfile"]["tmp_name"], $targetFilePath)) {
                 $fileName = date('Y-m-d H:i:s').$_FILES["imgfile"]["name"];
                 // Insert image file name into database
