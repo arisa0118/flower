@@ -12,7 +12,7 @@ if (mysqli_num_rows($result) == 0) {
 }
 while($row = mysqli_fetch_assoc($result)) {
 
-  echo '<img src="data:'.$row['image_type'].';base64,'.base64_encode($row['image_data']).'" width="200" /><br/>';
+  echo '<img src="data:'.$row['image_type'].';base64,'.base64_encode($row['image_data']).'" width="200" alt="TCU" /><br/>';
   echo $a++.'<br>';
 }
 include_once('footer.php');
