@@ -21,7 +21,8 @@
       
         $targetFilePath = $tmpname . $fileName;
         //檔案類型
-        $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+        // $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+        $fileType = $_FILES["imgfile"]["type"];
         //isset($_POST["submit"]) && 
         if (!empty($_FILES["imgfile"]["name"])) {
             //檔案內容
