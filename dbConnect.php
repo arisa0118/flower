@@ -1,8 +1,8 @@
 <?php
 // if ( ini_set( 'upload_tmp_dir', '/home/site/wwwroot/preview_img' ) === false ) die( 'Unable to set upload_tmp_dir.' );
 
-$db_hostname = "nyxc.mysql.database.azure.com";
-$db_username = "nyxc";
+$db_hostname = "nyxc1.mysql.database.azure.com";
+$db_username = "nyxc1";
 $db_password = "@Arisa0118Cassie0429";
 $database = "flower"; 
 // $db_hostname = "127.0.0.1";
