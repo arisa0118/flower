@@ -1,2 +1,2 @@
-echo <?php phpinfo();
+<?php phpinfo();
 echo sys_get_temp_dir();?>

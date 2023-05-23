@@ -61,7 +61,7 @@
 
                     //刪除目前第一筆資料
                     //echo $row['person_id'];
-                    if ($row['person_id'] > 61) {
+                    if ($row['person_id'] > 11) {
                         $query2 = "DELETE FROM person_data WHERE person_id=" . $row['person_id'];
                         $query_run2 = mysqli_query($dbConnection, $query2);
                     }
