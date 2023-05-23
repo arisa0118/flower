@@ -9,6 +9,7 @@ $database = "flower";
 // $db_username = "root";
 // $db_password = "";
 // $database = "flower_picture"; 
+echo "12行";
 $dbConnection=mysqli_connect($db_hostname,$db_username,$db_password,$database);
 
 //檢查連線是否成功
