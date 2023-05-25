@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="UseCSS1.css" rel="stylesheet">
+	<link href="UseCSS.css" rel="stylesheet">
 	<title>
 		flower
 	</title>
@@ -21,35 +21,23 @@
 		<li><a href="/#flower_intro_call">About</a></li>
 	</ul>
 	</nav>
-    <div class="content"></div>
   
-<div class="black-white_1layer" id="flower_intro_call">
+<div class="main" id="main">
     
-    <img src="img\black-white_1layer.PNG" width="100%" >
-    
-</div>
-<div class="black-white_2_5layer">
-    
-  
-    </div>
-<div class="black-white_2layer" >
-    
-    <img src="img\black-white_2layer.PNG" width="100%" >
+    <img src="img\index.PNG" width="100%" >
     
 </div>
-<div class="black-white_3layer">
-    
-    <img src="img\black-white_3layer.PNG" width="100%">
+<div class="context" id="context">
+<p class="context_title">作品介紹
+</p>
+    <p class="context_context">這面補夢網守護著關渡，將一切厄運都拒之門外，而關渡所有的美好記憶則成為守門花的養分。
+一個巨大的厄運襲擊向原本平靜的關渡平原，守門花耗盡力量，即將衰竭。請您幫助我們一起延續守門花的生命，您可以拍攝記錄下對於這個地方最美好的記憶，並將照片上傳至網站上，再透過AR軟體觀賞守護這片土地的花朵。
+</p>
     
 </div>
-<div class="black-white_0layer" id="black-white_0layer">
-    
-    <img src="img\black-white_0layer.PNG" width="100%" >
-    <a href="/uploadPicture.php"><div class="ring"></div></a>
-	<p>點擊注入能量</p>
-    
-</div>	
 
+    
+</div>
 <script>
 
 let black_white_0layer = document.getElementById('black-white_0layer');
