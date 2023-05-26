@@ -15,11 +15,7 @@
 </head>
 
 <body>
-	<nav>
-		<ul class="clientMenu1">
-		<li class="title"><a href="/"> <img src="img/Logo去背.png" width="50"></a></li>
-	</ul>
-	</nav>
+
 	
 	
 <div class="main" id="main">

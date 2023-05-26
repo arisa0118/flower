@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Comic Sans MS", "cursive";
+  font-family: "sans-serif", "cursive";
 }
 
 body {
@@ -29,7 +29,7 @@ ul {
   margin: 0;
   padding: 0px;
   overflow: hidden;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255,0.5);
   position: fixed;
   top: 0;
   width: 100%;
@@ -114,14 +114,15 @@ justify-content: center;
   padding: 14px 16px;
   justify-content: center;
   display: flex;
-
-  background:  #ff008479;
+  box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.438);
+  background:  transparent;
+  font-weight: bold;
   z-index: 100;
-  border: 2px solid white;
-
-  border-radius: 50px;
-  color: white;
-  font-size: 15px;
+  border: 3px solid #db408f;
+font-size:20px;
+  border-radius: 15px;
+  color: #db408f;
+ 
 }
 .btn_Download button:active {
   
@@ -133,12 +134,14 @@ justify-content: center;
 
 
 footer {
-  padding: 15px;
+  padding: 8px 20px;
+  font-size: 10px;
+  padding: 10px 20px;
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
  z-index: 999;
  position:absolute;
  bottom: 0;
  width: 100%;
-
+ text-align: center;
 }

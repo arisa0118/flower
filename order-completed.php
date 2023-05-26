@@ -18,7 +18,7 @@
 <body>
 <nav>
 		<ul class="clientMenu">
-		<li class="title"><a href="/">flower</a></li>
+		<li class="title"><a href="/"> <img src="img/home.png" width="20"></a></li>
 
 	</ul>
 	</nav>

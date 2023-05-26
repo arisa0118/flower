@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Comic Sans MS", "cursive";
+  font-family: "sans-serif", "cursive";
 }
 
 body {
@@ -31,7 +31,7 @@ ul {
   margin: 0;
   padding: 0px;
   overflow: hidden;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255,0.5);
   position: fixed;
   top: 0;
   width: 100%;
@@ -136,17 +136,23 @@ width: 100%;
   display: flex;
   justify-content: center;
 }
-
+.pri{
+  padding: 20px;
+  width: 100%;
+}
 footer {
-  padding: 15px;
+  padding: 8px 20px;
+  font-size: 10px;
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
  z-index: 999;
  position:relative;
- margin-top:8px;
+
+ margin-top:27px;
  bottom: 0;
  width: 100%;
  flex:​ 0 0 auto​;
+ text-align: center;
 }
 
 

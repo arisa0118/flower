@@ -17,7 +17,7 @@
 <body>
     <nav>
         <ul class="clientMenu">
-            <li class="title"><a href="/">flower</a></li>
+        <li class="title"><a href="/"> <img src="img/home.png" width="20"></a></li>
 
         </ul>
     </nav>
@@ -50,7 +50,7 @@
                     <input type="checkbox" required="required">同意使用者條款<a href="/privatebook.php"
                         style="font-size: 1px;">隱私權與條款細項</a><br><br>
                 </div>
-                <br><br>
+              <br>
                 <div class="submit">
                     <Input type="submit" class="btn_submit" name="submit" value="提交">
                 </div>
