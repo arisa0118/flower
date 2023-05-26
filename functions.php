@@ -51,14 +51,14 @@
                     $statusMsg = "The file " . $fileName . " has been uploaded successfully.";
 
                     //找出目前第一筆資料
-                    $sql = "SELECT person_id FROM person_data ORDER BY TIME LIMIT 1";
+                    $sql = "SELECT person_id FROM person_data ORDER BY TIME DESC LIMIT 1;";
                     $result = mysqli_query($dbConnection, $sql);
                     $row = mysqli_fetch_assoc($result);
-
+                    
                     //刪除目前第一筆資料
                     //echo $row['person_id'];
                     if ($row['person_id'] > 8) {
-                        $query2 = "DELETE FROM person_data WHERE person_id=" . $row['person_id'];
+                        $query2 = "DELETE FROM person_data WHERE person_id=" . $row['person_id']-8;
                         $query_run2 = mysqli_query($dbConnection, $query2);
                     }
                     //關閉連線
