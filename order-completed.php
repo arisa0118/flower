@@ -14,53 +14,30 @@
 </head>
 
 <body>
-    <nav>
-        <ul class="clientMenu">
-            <li class="title">flower</li>
-            <li><a href="/">home</a></li>
-            <li><a href="/#flower_intro_call">About</a></li>
-        </ul>
-    </nav>
+<nav>
+		<ul class="clientMenu">
+		<li class="title"><a href="/">flower</a></li>
+
+	</ul>
+	</nav>
+
+    <div class="container">
+    <div class="main">
 
 
-    <div class="content">
+
+   
 
 
-
-        <div class="logo2">
-            <img src="img\logo2.PNG" width="100%">
-        </div>
-
-
-        <div class="flower_frame">
-            <img src="img\flower_frame.PNG" id="flowers" width="100%">
-
-            <div class="TITLE_note1">
-            <?php
-            include_once('dbConnect.php');
-                    $sql = "SELECT * FROM person_data ORDER BY RAND ( ) LIMIT 1  ";
-                    $result = mysqli_query($dbConnection, $sql);
-                    $row = mysqli_fetch_assoc($result);
-                    if ($row['person_name'] == "匿名") {
-                        echo $row['person_name'] . '(' . $row['gender'] . '):<br>';
-                    } else {
-                        echo $row['person_name'] . ':<br>';
-                    }?>
-                <div class="note1_container">
-                    <?php
-                    
-                    echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' . $row['text'];
-                    ?>
-                </div>
-            </div>
-        </div>
+    
 
         <div class="icon_Download">
             <img src="img\download.PNG"  width="100%">
+         
         </div>
         <div class="btn_Download">
-<button onclick="location.href='uploadApk/flower.apk'" style="color: white; background:#78929ad9;border:2px soild white;">下載APK</button>
-            <button>未開放下載</button>
+<button onclick="location.href='uploadApk/flower.apk'" >下載APK</button>
+       
         </div>
 
 
@@ -74,7 +51,7 @@
             <?php echo date('Y') ?>&thinsp;nyxc 版權所有 不得轉載
         </p>
     </footer>
-
+    </div>
 
 </body>
 

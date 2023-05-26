@@ -34,16 +34,12 @@
                 //新添加一筆資料(準備)
                 $sql = "INSERT INTO person_data (
                 `person_name`,
-                `gender`,
-                `text`,
                 `image_data`,
                 `image_name`, 
                 `image_type`,
                 `time`
                 ) VALUES (
                     '{$_POST['person_name']}',
-                    '{$_POST['gender']}',
-                    '{$_POST['want_tell_text']}',
                     '{$image}',
                     '{$fileName}',
                     '{$fileType}',

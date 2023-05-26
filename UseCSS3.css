@@ -6,10 +6,14 @@
 }
 
 body {
-  background: linear-gradient(to top, #bd83ba, #98b9ca);
-  min-height: 100vh;
+  background-image: url("img/bg_1_1.PNG");
+  background-size: cover;
+  height: 100%;
   overflow-x: hidden;
+  justify-content: center;
   margin: 0;
+  color: rgb(0, 0, 0);
+  display: flex;
 }
 
 nav a {
@@ -25,7 +29,7 @@ ul {
   margin: 0;
   padding: 0px;
   overflow: hidden;
-  background-color: #78929ad9;
+  background-color: rgb(255, 255, 255);
   position: fixed;
   top: 0;
   width: 100%;
@@ -37,73 +41,58 @@ ul {
 .title {
   float: left;
   display: block;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
 li {
   float: right;
+  
 }
 
 li a {
 
   display: block;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:active {
-  float: right;
+
   display: block;
-  background: white;
-  color: rgb(51, 51, 51);
+  background-color: transparent;
+  color: #ff0084cd;
   text-align: center;
-  padding: 14px 16px;
+ 
   text-decoration: none;
 }
 
 .main {
-  padding: 80px 20px;
+margin-top: 50px;
   background-color: transparent;
-  height: 850px;
+
 
 
 }
-.content {
-  position: relative;
-  /* background-image: linear-gradient(to top, #ffe1f0,#ffa5d2); */
-  z-index: 1;
-  height: 1200px;
-}
-.flower_frame{
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
+
+.container {
+  display: flex; 
+  flex-direction: column; 
+  height:​ 100%​;
 padding: 0px;
-/* border: 2px solid black; */
 width: 100%;
-}
-.TITLE_note1{
-  position:absolute;
-  width: 60%;
-  /* border: 2px solid red; */
-}
-.note1_container{
-  position:relative;
-  /* border: 2px solid rgb(0, 211, 151); */
-}
-
+justify-content: center;
+ }
 
 .icon_Download {
   position:relative;
   width: 100%;
   display: flex;
   z-index: 100;
+
 }
 
 
@@ -121,15 +110,16 @@ width: 100%;
 
 .btn_Download button {
   position: relative;
-  width: 30%;
-  padding: 6px 10px;
+  width: 60%;
+  padding: 14px 16px;
   justify-content: center;
   display: flex;
-  float: left;
+
+  background:  #ff008479;
   z-index: 100;
   border: 2px solid white;
-  background-color: transparent;
-  border-radius: 12px;
+
+  border-radius: 50px;
   color: white;
   font-size: 15px;
 }
@@ -142,16 +132,13 @@ width: 100%;
 
 
 
-
 footer {
-  
-  background-color: #78929ab7;
-  display:block;
-  /* height:150px; */
-  position:relative;
-  bottom:0px;
-color: white;
-  width: 100%;
   padding: 15px;
-  z-index:999;
-  text-align:center;}
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+ z-index: 999;
+ position:absolute;
+ bottom: 0;
+ width: 100%;
+
+}
