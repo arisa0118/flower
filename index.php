@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="img/Logo去背.png">
 	<link href="UseCSS.css" rel="stylesheet">
 	<title>
 		flower
@@ -16,7 +17,7 @@
 <body>
 	<nav>
 		<ul class="clientMenu1">
-		<li class="title"><a href="/">flower</a></li>
+		<li class="title"><a href="/"> <img src="img/Logo去背.png" width="50"></a></li>
 	</ul>
 	</nav>
 	

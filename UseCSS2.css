@@ -10,10 +10,12 @@ body {
   background-size: cover;
   height: 100%;
   overflow-x: hidden;
+  display: flex;
   justify-content: center;
   margin: 0;
   color: rgb(0, 0, 0);
-  display: flex;
+ 
+  
 }
 
 nav a {
@@ -80,6 +82,9 @@ li a:active {
   flex:​ 1 0 auto​;
   min-height: calc(100vh - 60px); 
 }
+.photo{
+  padding: 0px  0px  0px 10px ;
+}
 .bg{
   z-index: -2;
 }
@@ -115,7 +120,9 @@ width: 100%;
   font-size: 16px;
   border-radius: 8px;
   border: none;
-  background:  rgb(255, 255, 255);
+  
+  border: 2px solid rgb(0, 0, 0);
+  background:  transparent;
   color: #000000;
    font-weight: bold;
 
@@ -125,7 +132,10 @@ width: 100%;
   background-color: #a6b1d3;
   color: white;
 }
-
+.submit{
+  display: flex;
+  justify-content: center;
+}
 
 footer {
   padding: 15px;

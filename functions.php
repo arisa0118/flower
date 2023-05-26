@@ -33,13 +33,13 @@
                 // Insert image file name into database
                 //新添加一筆資料(準備)
                 $sql = "INSERT INTO person_data (
-                `person_name`,
+                
                 `image_data`,
                 `image_name`, 
                 `image_type`,
                 `time`
                 ) VALUES (
-                    '{$_POST['person_name']}',
+                   
                     '{$image}',
                     '{$fileName}',
                     '{$fileType}',
@@ -57,7 +57,7 @@
 
                     //刪除目前第一筆資料
                     //echo $row['person_id'];
-                    if ($row['person_id'] > 11) {
+                    if ($row['person_id'] > 8) {
                         $query2 = "DELETE FROM person_data WHERE person_id=" . $row['person_id'];
                         $query_run2 = mysqli_query($dbConnection, $query2);
                     }
