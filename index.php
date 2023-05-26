@@ -17,7 +17,6 @@
 <body>
 
 	
-	
 <div class="main" id="main">
     <img src="img\index2.PNG" width="100%" >
 </div>
@@ -26,8 +25,29 @@
         </div>
 <footer>
 	
-	<p>&copy;&thinsp;<?php echo date('Y')?>&thinsp;nyxc 版權所有 不得轉載</p>
+	<p >&copy;&thinsp;<?php echo date('Y')?>&thinsp;nyxc 版權所有 不得轉載</p>
 </footer>
+<div class="dialog_div" >
+<dialog id="infoModal" >
+<div class="videobox" >
+	<p >Flower story</p>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HxHDHd4uPqM?autoplay=1&mute=1" title="flower" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div><button id="close">close</button>
+</dialog>
+</div>
+
+<script>
+let btn=document.querySelector("#show");
+let infoModal=document.querySelector("#infoModal");
+let close=document.querySelector("#close");
+window.addEventListener("load", function(){
+	infoModal.showModal();
+})
+close.addEventListener("click", function(){
+  infoModal.close();
+})
+	</script>
+	
 
 </body>
 

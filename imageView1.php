@@ -17,5 +17,5 @@ while($row = mysqli_fetch_assoc($result)) {
   //'.$row['image_type'].';
 
 }
-include_once('footer.php');
+
 ?>
