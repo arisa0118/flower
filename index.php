@@ -16,10 +16,15 @@
 
 <body>
 
-	
+<div class="videobox" >
+	<p >Flower story</p>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HxHDHd4uPqM?loop=1&autoplay=1&mute=1" title="flower" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>	
 <div class="main" id="main">
     <img src="img\index2.PNG" width="100%" >
 </div>
+
+
 <div class="btn_Download">
 <button onclick="location.href='/uploadPicture.php'">前往上傳照片</button>   
         </div>
@@ -27,14 +32,7 @@
 	
 	<p >&copy;&thinsp;<?php echo date('Y')?>&thinsp;nyxc 版權所有 不得轉載</p>
 </footer>
-<div class="dialog_div" >
-<dialog id="infoModal" >
-<div class="videobox" >
-	<p >Flower story</p>
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HxHDHd4uPqM?autoplay=1&mute=1" title="flower" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div><button id="close">close</button>
-</dialog>
-</div>
+
 
 <script>
 let btn=document.querySelector("#show");
