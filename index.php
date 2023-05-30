@@ -18,7 +18,7 @@
 
 <div class="videobox" >
 
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HxHDHd4uPqM?autoplay=1&mute=1" title="flower" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HxHDHd4uPqM?autoplay=1" title="flower" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>	
 <div class="main" id="main">
     <img src="img\index2.PNG" width="100%" >
