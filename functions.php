@@ -65,7 +65,7 @@ function createOrder()
                 }
                 //關閉連線
                 mysqli_close($dbConnection);
-                echo '<script>document.location.href="/order-completed.php";</script>';
+                echo '<script>document.location.href="https://nyxc1.azurewebsites.net/order-completed.php";</script>';
 
             } else {
                 $statusMsg = "File upload failed, please try again.";
