@@ -2,16 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Comic Sans MS", "cursive";
+  font-family: "sans-serif", "cursive";
 }
 
 body {
-  background: #bdbdbd;
-  min-height: 100vh;
+  background-image: url("img/bg_1_1.PNG");
+  background-size: cover;
+  height: 100%;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  color: rgb(0, 0, 0);
+ 
+  
 }
-
 
 nav a {
   color: inherit;
@@ -20,34 +25,29 @@ nav a {
   /* 移除超連結底線 */
 
 }
-
-.clientMenu1{
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0px;
   overflow: hidden;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255,0.5);
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 998;
+  z-index: 9999;
 
 }
-
-
 .title {
   float: left;
   display: block;
   color: rgb(0, 0, 0);
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
-
 li {
   float: right;
+  
 }
-
 li a {
 
   display: block;
@@ -56,145 +56,41 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-
 li a:active {
-  float: right;
+
   display: block;
-  background: white;
-  color: rgb(51, 51, 51);
+  background-color: transparent;
+  color: #ff0084cd;
   text-align: center;
-  padding: 14px 16px;
+ 
   text-decoration: none;
 }
 
 
-
-.black-white_0layer{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.main {
   width: 100%;
-  top:1280px;
-  z-index: 987;
- 
-}
-.black-white_0layer .ring {
-  position: absolute;
-  display: flex;
-  width: 50px;
-  height: 50px;
-  justify-content: center;
-  left: 80px;
-  z-index: 989;
-  border-radius: 70%;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.3), 0 0 0 13px rgba(255, 255, 255, 0.1);
-  animation: animate 2s linear infinite;
-}
-.black-white_0layer p {
-  position: absolute;
-  display: inline-block;
-  /* border: 2px solid rgba(255, 255, 255, 0.962); */
-  padding-top: 140px;
-  padding-right: 60px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 1.0);
-  animation: example 2s linear infinite;
-}
-@keyframes animate {
-  0% {
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0);
-  }
-
-  50% {
-    border: 2px solid rgba(255, 255, 255, 1);
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5), 0 0 0 8px rgba(255, 255, 255, 0.3);
-  }
-
-  100% {
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0);
-  }
-}
-@keyframes example {
-  0%   {color:rgba(255, 255, 255, 0.2); }
-  50%  {color:rgb(255, 255, 255);}
-  100% {color:rgba(255, 255, 255, 0.2); }
-}
-
-
-.black-white_1layer{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-
-  top: 550px;
-  z-index: 977;
+  top: 0;
+  position:relative;
+  padding: 60px 20px 0px 20px;
   
 }
-.black-white_2layer{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.pri{
+  padding: 20px;
   width: 100%;
-  top: 430px;
-  z-index: 966;
 }
-
-.black-white_2_5layer{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  top: 1000px;
-  height: 400px;
-  z-index: 952;
-  background: #bdbdbd;
-
-}
-.black-white_3layer{
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  top: 0px;
-  z-index: 941;
-
-
-}
-
-
-
-
-.content{
-  padding-top: 40px;
-    padding-bottom: 40px;
-    position: relative;
-    height: 1650px;
-    /* border: 1px solid red; */
-   
-    z-index: 14;
-
-}
-
 footer {
-  display:block;
-/* height:150px; */
-position:relative;
-bottom:0px;
-background-color:#FFFFFF;
-width: 100%;
-padding: 15px;
-z-index:999;
-text-align:center;
+  padding: 8px 20px;
+  font-size: 10px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+ z-index: 999;
+ width: 100%;
+ position:relative;
+bottom: 0;
+
+ text-align: center;
 }
+
 
 
 @media screen and (min-width:393px){ 
@@ -202,16 +98,6 @@ text-align:center;
   
 }
 
-@media screen and (max-width:420px){ 
-  .content{
-    padding-top: 40px;
-      padding-bottom: 40px;
-      position: relative;
-      height: 1650px;
-      /* border: 1px solid red; */
-      display:block;
-      z-index: 999;
-      pointer-events: none;
-      
-  }
+@media screen and (min-width:1000px){ 
+
 }

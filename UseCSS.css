@@ -2,24 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Comic Sans MS", "cursive";
+  font-family: "sans-serif", "cursive";
+  
 }
 
 body {
-  background: #bdbdbd;
+  background: #ffffff;
   min-height: 100vh;
   overflow-x: hidden;
-  justify-content: center;
   margin: 0;
-}
-.pri_TITLE{
-  text-align: center;
-  padding: 0px 20px;
-  justify-content: center;
-
-}
-.pri_p{
-padding: 20px;
+ 
 }
 
 nav a {
@@ -35,11 +27,11 @@ ul {
   margin: 0;
   padding: 0px;
   overflow: hidden;
-  background-color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 777;
 
 }
 
@@ -47,219 +39,113 @@ ul {
 .title {
   float: left;
   display: block;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
 li {
   float: right;
+  
 }
 
 li a {
 
   display: block;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
-  padding: 14px 16px;
+  padding: 4px 10px;
   text-decoration: none;
 }
 
 li a:active {
-  float: right;
+
   display: block;
-  background: white;
-  color: rgb(51, 51, 51);
+  background-color: transparent;
+  color: #ff0084cd;
   text-align: center;
-  padding: 14px 16px;
+ 
   text-decoration: none;
+}
+.videobox {
+  position: relative;
+  top: 70px;
+  width: 100%;
+  height: 80px;
+  padding-bottom: 56.25%;
+  border: 3px solid #000000;
+}
+
+.videobox iframe {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.videobox embed {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
 }
 
 .main {
   position: relative;
-  padding: 80px 20px;
-  background-color: linear-gradient(to top, #a68cc8, #95c0b3);
-  height: 850px;
-
-
-}
-
-#text {
-  /* font-family: 'Bradley Hand ITC',sans-serif; */
-  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.511);
-}
-
-.TITLE {
-  position: fixed;
-  top: 430px;
-  /* top: 0px; */
-  justify-content: center;
-  text-align: center;
+  padding-top: 140px;
+  background-color:transparent;
   width: 100%;
-  pointer-events: none;
-  border: 5px dashed black;
-  z-index: 6;
-  font-size: 37px;
-  color: rgb(216, 216, 216);
+
 }
-
-
-.TITLE_flower {
+.btn_Download {
   position: absolute;
-  top: 100px;
   width: 100%;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.obj1 {
-  position: relative;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: Space-around;
+  margin-top: -100px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 1000px;
-  z-index: 20;
-
+  float: left;
+  z-index: 100;
 }
 
-.obj1 img {
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
-  z-index: 20;
-}
-
-.mountain_top {
-  z-index: 30;
-
-}
-
-.mountain_bottom {
-
-  z-index: 30;
-}
-
-.flower_intro_call {
-  padding: 20px;
-  top: 870px;
-  margin-top: 0px;
-  background-color: transparent;
-  height: 1000px;
-  z-index: 999;
-  position: absolute;
-
-}
-
-.flower_intro {
-  padding: 20px;
-  top: 910px;
-  margin-top: 0px;
-  background-color: #797a7c;
-  z-index: 999;
-  position: absolute;
-}
-
-.flower_PNG {
-  top: -400px;
-  position: fixed;
-  z-index: 3;
-}
-
-.flower_cover {
-  padding: 20px;
-  top: 400px;
-  margin-top: 0px;
-  height: 400px;
-  width: 100%;
-  z-index: 4;
-  position: absolute;
-  background: #bdbdbd;
-}
-
-.container {
-  position: absolute;
-  top: 1830px;
-  padding: 0px 50px;
-  width: 100%;
-  z-index: 9999;
-}
-
-.container .ring {
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  border-radius: 70%;
-  border: 4px solid rgba(255, 255, 255, 0.7);
-  z-index: 99;
-  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.3), 0 0 0 13px rgba(255, 255, 255, 0.1);
-  animation: animate 2s linear infinite;
-}
-
-.container p {
+.btn_Download button {
   position: relative;
-  top: 10px;
-  border-color: rgba(0, 0, 0, 0);
-  padding: 75px 25px;
-  font-size: 18px;
+  width: 48%;
+  padding: 14px 16px;
+  justify-content: center;
+  display: flex;
+  float: left;
+  z-index: 100;
+  border: 3px solid #000000;
+  background-color: transparent;
+  border-radius: 12px;
+  color: #000000;
+  font-size: 15px;
   font-weight: bold;
-  color: rgba(255, 255, 255, 1.0);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.503);
 }
-
-@keyframes animate {
-  0% {
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.1), 0 0 0 13px rgba(255, 255, 255, 0);
-  }
-
-  50% {
-    border: 4px solid rgba(255, 255, 255, 1);
-    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5), 0 0 0 13px rgba(255, 255, 255, 0.3);
-  }
-
-  100% {
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.1), 0 0 0 13px rgba(255, 255, 255, 0);
-  }
+.btn_Download button:active {
+  
+  background-color: #85086a82;
+  color: #ffffff;
 }
 
 
-
-input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 2px solid black;
-  background: transparent;
-}
-
-.btn_submit {
-  padding: 10px 24px;
-  text-align: center;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 2px solid rgb(51, 51, 51);
-  background: transparent;
-
-}
-
-.btn_submit:hover {
-  background-color: rgb(51, 51, 51);
-  color: white;
-}
 
 
 footer {
-  padding: 20px;
-  background: rgb(51, 51, 51);
-  color: white;
+  position: relative;
+  padding: 8px 20px;
+  font-size: 10px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   flex: 1, 0, auto;
   width: 100%;
  z-index: 9;
+ text-align: center;
 }
 
 
