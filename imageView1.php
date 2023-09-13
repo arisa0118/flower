@@ -13,9 +13,11 @@ if (mysqli_num_rows($result) == 0) {
 while($row = mysqli_fetch_assoc($result)) {
 
   //echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image_data']).'" />';
-  echo '<img src="data:'.$row['image_type'].';base64,'.base64_encode($row['image_data']).'" width="200" alt="TCU" /><br/>';
+  //echo '<img src="data:'.$row['image_type'].';base64,'.base64_encode($row['image_data']).'" width="200" alt="TCU" /><br/>';
+ 
+  ?><img src="img/<?php echo $row['image_data'];?>" width="200" alt="TCU" /><br/>
   //'.$row['image_type'].';
-
+  <?php
 }
 
 ?>
