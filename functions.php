@@ -84,7 +84,11 @@ else{
                     $result = mysqli_query($dbConnection, $sql);
                     $row = mysqli_fetch_assoc($result);
                     $query2 = "DELETE FROM person_data WHERE person_id=" . $row['person_id'];
+                    //刪資料夾照片
+                    $filepath="pimg/".$row['image_data'];
+                    unlink($filepath);
                     $query_run2 = mysqli_query($dbConnection, $query2);
+                    
                 }
                 //關閉連線
                 mysqli_close($dbConnection);
