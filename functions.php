@@ -34,23 +34,27 @@ echo "<script> alert('Image Does Not Exist');</script>";
 else{
     
 
-    //檔名(包含附檔名)
-    //$fileName = basename($_FILES["imgfile"]["name"]);
-    $fileName = explode(date('Y-m-d H:i:s'), $_FILES["imgfile"]["name"]);
+    //檔名(包含附檔名)$fileName = basename($_FILES["imgfile"]["name"]);
+    $fileName = $_FILES["imgfile"]["name"];
+    $fileSize = $_FILES["imgfile"]["size"];
     //暫存位置'preview_img/'.$row["image_name"]
     $tmpname = $_FILES['imgfile']['tmp_name'];
-    $targetFilePath = $tmpname . $fileName;
     //檔案類型
     // $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
     $fileType = $_FILES["imgfile"]["type"];
-    //isset($_POST["submit"]) && 
-    if (!empty($_FILES["imgfile"]["name"])) {
-        //檔案內容
-        $image = addslashes(file_get_contents($tmpname));
-        if (move_uploaded_file($_FILES["imgfile"]["tmp_name"], iconv("utf-8", "big5", $targetFilePath))) {
-            // if (move_uploaded_file($_FILES["imgfile"]["tmp_name"], $targetFilePath)) {
-            $fileName = date('Y-m-d H:i:s') . $_FILES["imgfile"]["name"];
-            // Insert image file name into database
+
+    $validImageExtension=['jpg','jpeg','png'];
+    $imageExtension=explode('.',$fileName);
+    $imageExtension=strtolower(end($imageExtension));
+    if(!in_array($imageExtension,$validImageExtension)){
+        echo "<script> alert('Invalid Image Extension');</script>";
+    }if($fileSize>1000000){
+        echo "<script> alert('Image Size Is Too Large');</script>";
+    }else{
+        $newImageName=uniqid();
+        $newImageName.= '.'. $imageExtension;
+        move_uploaded_file($tmpname,'img/',$newImageName);
+        // Insert image file name into database
             //新添加一筆資料(準備)
             $sql = "INSERT INTO person_data (
                 
@@ -60,15 +64,13 @@ else{
                 `time`
                 ) VALUES (
                    
-                    '{$image}',
+                    '{$newImageName}',
                     '{$fileName}',
                     '{$fileType}',
                     '" . date('Y-m-d H:i:s') . "')";
-            //echo $sql;
             //寫入MSQL資料庫
             $insert = mysqli_query($dbConnection, $sql);
             if ($insert) {
-                $statusMsg = "The file " . $fileName . " has been uploaded successfully.";
 
                 //找出目前第一筆資料
                 $sql = "SELECT person_id FROM person_data ORDER BY TIME DESC LIMIT 1;";
@@ -92,15 +94,7 @@ else{
                 $statusMsg = "File upload failed, please try again.";
                 header("Location: /");
             }
-        } else {
-            $statusMsg = "Sorry, there was an error uploading your file.";
-        }
-    } else {
-        $statusMsg = 'Please select a file to upload.';
     }
-    // Display status message
-    echo $statusMsg;
-
 
 }
 
