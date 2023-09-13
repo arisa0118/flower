@@ -53,7 +53,7 @@ else{
     }else{
         $newImageName=uniqid();
         $newImageName.= '.'. $imageExtension;
-        move_uploaded_file($tmpname,'img/',$newImageName);
+        move_uploaded_file($tmpname,'Pimg/',$newImageName);
         // Insert image file name into database
             //新添加一筆資料(準備)
             $sql = "INSERT INTO person_data (
