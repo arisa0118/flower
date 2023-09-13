@@ -26,15 +26,19 @@ function createOrder()
 {
 
     global $dbConnection;
+if($_FILES['imgfile']['error']=== 4){
 
-    $tmpname = $_FILES['imgfile']['tmp_name'];
+echo "<script> alert('Image Does Not Exist');</script>";
+
+}
+else{
+    
 
     //檔名(包含附檔名)
     //$fileName = basename($_FILES["imgfile"]["name"]);
     $fileName = explode(date('Y-m-d H:i:s'), $_FILES["imgfile"]["name"]);
-
     //暫存位置'preview_img/'.$row["image_name"]
-
+    $tmpname = $_FILES['imgfile']['tmp_name'];
     $targetFilePath = $tmpname . $fileName;
     //檔案類型
     // $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
@@ -98,7 +102,7 @@ function createOrder()
     echo $statusMsg;
 
 
-
+}
 
 
 
