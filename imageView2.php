@@ -4,8 +4,9 @@
 use Illuminate\Http\Request;
 
 header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
-header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Authorization');
+//header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+header('Access-Control-Allow-Methods: *');
+header('Access-Control-Allow-Headers: Content-Type, Origin, Methods');
 
 $db_hostname = "nyxc1.mysql.database.azure.com";
 $db_username = "nyxc_mySQL";
@@ -29,6 +30,8 @@ if(mysqli_connect_errno()){
 
 //將文字編碼設為UTF-8以正確顯示中文
 mysqli_set_charset($dbConnection,"utf8");
+
+
 $sql = "SELECT * FROM person_data";
 $result = mysqli_query($dbConnection,$sql);
 
@@ -41,9 +44,12 @@ if (mysqli_num_rows($result) == 0) {
 while($row = mysqli_fetch_assoc($result)) {
 
   //echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image_data']).'" />';
-  echo '<img src="data:'.$row['image_type'].';base64,'.base64_encode($row['image_data']).'" width="200" alt="TCU" /><br/>';
+  //echo '<img src="data:'.$row['image_type'].';base64,'.base64_encode($row['image_data']).'" width="200" alt="TCU" /><br/>';
+ 
+  ?><img src="pimg/<?php echo $row['image_data'];?>" width="200" alt="TCU" /><br/>
+  
+  <?php
   //'.$row['image_type'].';
-
 }
 
 ?>
