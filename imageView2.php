@@ -1,6 +1,6 @@
 
 <?php 
-
+ob_start(); // 启动输出缓冲区
 use Illuminate\Http\Request;
 
 header('Access-Control-Allow-Origin: *');
@@ -8,6 +8,9 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: *');
 header('Access-Control-Allow-Headers: Content-Type, Origin, Methods');
 
+// 处理请求的代码
+
+ob_end_flush();
 $db_hostname = "nyxc1.mysql.database.azure.com";
 $db_username = "nyxc_mySQL";
 $db_password = "@Arisa0118Cassie0429";
