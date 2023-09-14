@@ -2,10 +2,10 @@
 <?php 
 
 
-header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Origin: *");
 //header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
-header('Access-Control-Allow-Methods: *');
-header('Access-Control-Allow-Headers: Content-Type, Origin, Methods');
+header("Access-Control-Allow-Methods: *");
+header("Access-Control-Allow-Headers: Content-Type, Origin, Methods");
 
 
 $db_hostname = "nyxc1.mysql.database.azure.com";
