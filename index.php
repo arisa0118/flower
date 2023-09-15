@@ -35,7 +35,7 @@ include('dbConnect.php');?>
 </footer>
 
 
-<script>
+<!-- <script>
 let btn=document.querySelector("#show");
 let infoModal=document.querySelector("#infoModal");
 let close=document.querySelector("#close");
@@ -45,7 +45,7 @@ window.addEventListener("load", function(){
 close.addEventListener("click", function(){
   infoModal.close();
 })
-	</script>
+	</script> -->
 	
 
 </body>
