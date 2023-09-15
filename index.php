@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
-<?php include('dbConnect.php');?>
+<?php 
+// header("Access-Control-Allow-Origin: *");
+// //header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+// header("Access-Control-Allow-Methods: *");
+// header("Access-Control-Allow-Headers:  Origin, Methods,Content-Type");
+include('dbConnect.php');?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,12 +25,7 @@
 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HxHDHd4uPqM?autoplay=1" title="flower" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>	
 <div class="main" id="main">
-<?php 
-header("Access-Control-Allow-Origin: *");
-//header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
-header("Access-Control-Allow-Methods: *");
-header("Access-Control-Allow-Headers:  Origin, Methods,Content-Type");
-?>
+
     <img src="img\index2.PNG" width="100%" >
 </div>
 
