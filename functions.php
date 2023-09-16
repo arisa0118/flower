@@ -48,7 +48,7 @@ else{
     $imageExtension=strtolower(end($imageExtension));
     if(!in_array($imageExtension,$validImageExtension)){
         echo "<script> alert('Invalid Image Extension');</script>";
-    }if($fileSize>1000000){
+    }if($fileSize>100000000){
         echo "<script> alert('Image Size Is Too Large');</script>";
     }else{
         $newImageName=uniqid();
