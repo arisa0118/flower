@@ -38,7 +38,7 @@
          
         </div>
         <div class="btn_Download">
-<button onclick="location.href='uploadApk/flower.apk'" >下載APK</button>
+<button onclick="location.href='https://pvonq.zappar.io/4594993413743440733/1.0.17/'" >下載APK</button>
        
         </div>
 
