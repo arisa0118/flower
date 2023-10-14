@@ -31,16 +31,18 @@
 
 
    
+        <div class="icon_Download">
 
+        </div>
 
     
 
-        <div class="icon_Download">
+        <!-- <div class="icon_Download">
             <img src="img\download.PNG"  width="100%">
          
-        </div>
+        </div> -->
         <div class="btn_Download">
-<button onclick="location.href='https://pvonq.zappar.io/4594993413743440733/1.0.17/'" >下載APK</button>
+<button onclick="location.href='https://pvonq.zappar.io/4594993413743440733/1.0.17/'" >前往WebAR</button>
        
         </div>
 

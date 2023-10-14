@@ -97,7 +97,7 @@ justify-content: center;
 
 
 .btn_Download {
-  position: relative;
+  position: absolute;
   width: 100%;
   margin: 0 auto;
 
@@ -105,7 +105,8 @@ justify-content: center;
   justify-content: Space-around;
   display: flex;
   float: left;
-  z-index: 100;
+  z-index: 600;
+  top: 2800px;
 }
 
 .btn_Download button {
@@ -117,11 +118,11 @@ justify-content: center;
   box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.438);
   background:  transparent;
   font-weight: bold;
-  z-index: 100;
-  border: 3px solid #db408f;
+  
+  border: 3px solid #ffffff;
 font-size:20px;
   border-radius: 15px;
-  color: #db408f;
+  color: #ffffff;
  
 }
 .btn_Download button:active {
@@ -139,8 +140,8 @@ footer {
   padding: 10px 20px;
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
- z-index: 999;
- position:absolute;
+ z-index: 500;
+ position:relative;
  bottom: 0;
  width: 100%;
  text-align: center;
