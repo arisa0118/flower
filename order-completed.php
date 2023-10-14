@@ -27,6 +27,8 @@
     <div class="main">
 
 
+<img src="img/bg_1_2.PNG" width="100%" >
+
 
    
 
