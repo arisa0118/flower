@@ -106,7 +106,7 @@ justify-content: center;
   display: flex;
   float: left;
   z-index: 600;
-  top: 2800px;
+  top: 600px;
 }
 
 .btn_Download button {
