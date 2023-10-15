@@ -125,12 +125,13 @@ li a:active {
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.503);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0);
 }
 .btn_Download button:active {
   
-  background-color: #85086a82;
-  color: #ffffff;
+  background-color: #07268282;
+  color: #000000;
+  border: 3px solid #000000;
 }
 
 

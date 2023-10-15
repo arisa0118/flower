@@ -106,7 +106,7 @@ justify-content: center;
   display: flex;
   float: left;
   z-index: 600;
-  top:620px;
+  margin-top: -100px;
 }
 }
 @media screen and (min-width: 349px) {
@@ -121,7 +121,7 @@ justify-content: center;
     display: flex;
     float: left;
     z-index: 600;
-    top:700px;
+    margin-top: -100px;
   }
   }
 .btn_Download button {
