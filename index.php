@@ -27,7 +27,7 @@ include('dbConnect.php');?>
 
 
 <div class="btn_Download">
-<button onclick="location.href='/uploadPicture.php'">前往上傳照片</button>   
+<button onclick="location.href='/uploadPicture.php'">前往上傳最美好的回憶</button>   
         </div>
 <footer>
 	
