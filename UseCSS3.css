@@ -94,7 +94,7 @@ justify-content: center;
   z-index: 100;
 
 }
-
+@media screen and (max-width: 349px) {
 
 .btn_Download {
   position: absolute;
@@ -106,9 +106,24 @@ justify-content: center;
   display: flex;
   float: left;
   z-index: 600;
-  top: 800px;
+  top:620px;
 }
+}
+@media screen and (min-width: 349px) {
 
+  .btn_Download {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+  
+    flex-direction: row;
+    justify-content: Space-around;
+    display: flex;
+    float: left;
+    z-index: 600;
+    top:700px;
+  }
+  }
 .btn_Download button {
   position: relative;
   width: 60%;
