@@ -22,7 +22,7 @@ include('dbConnect.php');?>
 </div>	 -->
 <div class="main" id="main">
 
-    <img src="img\index6.PNG" width="100%" >
+    <img src="img\bg_3.PNG" width="100%" >
 </div>
 
 
