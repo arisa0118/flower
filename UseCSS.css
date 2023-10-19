@@ -124,7 +124,7 @@ li a:active {
   border-radius: 12px;
   color: #ffffff;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: lighter;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0);
 }
 .btn_Download button:active {
