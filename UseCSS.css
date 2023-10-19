@@ -119,19 +119,19 @@ li a:active {
   display: flex;
   float: left;
   z-index: 100;
-  border: 3px solid #ffffff;
+  border: 1px solid #ffffff;
   background-color: transparent;
   border-radius: 12px;
   color: #ffffff;
   font-size: 15px;
-  font-weight: lighter;
+  font-weight: bold;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0);
 }
 .btn_Download button:active {
   
   background-color: #07268282;
   color: #000000;
-  border: 3px solid #000000;
+  border: 1px solid #000000;
 }
 
 
