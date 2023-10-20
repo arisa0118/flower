@@ -9,7 +9,8 @@ include('dbConnect.php');?>
 	<link rel="icon" href="img/Logo去背.png">
 	<link href="UseCSS.css" rel="stylesheet">
 	<title>
-		flower
+	日月草
+
 	</title>
 	
 </head>

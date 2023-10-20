@@ -105,7 +105,7 @@ li a:active {
   margin: 0 auto;
   flex-direction: row;
   justify-content: Space-around;
-  margin-top: -100px;
+  margin-top: -180px;
   display: flex;
   float: left;
   z-index: 100;
