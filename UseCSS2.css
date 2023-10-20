@@ -94,8 +94,8 @@ label{
 
 /*input file*/
 .fileUpload {
-	background:#0c1c34e3;
-  border: 2px solid rgb(255, 255, 255);
+	background:#a8c0ede3;
+  border: 1px solid rgb(255, 255, 255);
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
@@ -112,7 +112,7 @@ label{
   
 }
 .fileUpload:hover, .fileUpload:active, .fileUpload:focus {
-	background:#0c1c34e3;
+	background:#A8C0EDe3;
   cursor: pointer;
 }
 .fileUpload input.upload {
@@ -171,14 +171,14 @@ width: 100%;
   border: none;
   
   border: 2px solid rgb(255, 255, 255);
-  background:#0c1c34e3;
+  background:#12264Ae3;
   color: #ffffff;
    font-weight: bold;
 
 }
 
 .btn_submit:hover {
-  background:#0c1c34e3;
+  background:#12264Ae3;
   color: white;
 }
 .submit{

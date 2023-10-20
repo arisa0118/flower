@@ -51,7 +51,7 @@
                     </div>
                     <br><br>
                     <input type="checkbox" required="required" ><a style="color: rgb(255, 255, 255);">同意使用者條款</a><a href="/privatebook.php"
-                        style="font-size: 10px;">隱私權與條款細項</a><br><br>
+                        style="font-size: 10px; color: rgb(195, 226, 255);">隱私權與條款細項</a><br><br>
                 </div>
               <br>
                 <div class="submit">
