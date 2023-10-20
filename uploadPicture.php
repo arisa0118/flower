@@ -1,4 +1,4 @@
-<?php //include_once('dbConnect.php');?>
+<?php include_once('dbConnect.php');?>
 <!DOCTYPE html>
 <html>
 
@@ -40,15 +40,18 @@
 
                 <div class="photo">
                     <label for="image">拍一張這裡的照片：</label><br><br>
+                    <div class="fileUpload">
                     <input type="file" name="imgfile" data-target="preview_img" accept="image/gif,image/jpeg,image/png"
-                        required="required"><br><br>
+                        required="required" class="upload">
+                        <span>Upload</span>
+                        </div><br><br>
                     <label for="image" >預覽照片：</label><br><br>
                     <div>
                         <img class="preview_img" id="preview_img" src="#" width="250" />
                     </div>
                     <br><br>
-                    <input type="checkbox" required="required">同意使用者條款<a href="/privatebook.php"
-                        style="font-size: 1px;">隱私權與條款細項</a><br><br>
+                    <input type="checkbox" required="required" ><a style="color: rgb(255, 255, 255);">同意使用者條款</a><a href="/privatebook.php"
+                        style="font-size: 10px;">隱私權與條款細項</a><br><br>
                 </div>
               <br>
                 <div class="submit">

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "sans-serif", "cursive";
+  font-family: sans-serif, "cursive";
 }
 
 body {
@@ -56,7 +56,7 @@ li {
 li a {
 
   display: block;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -89,26 +89,71 @@ li a:active {
   z-index: -2;
 }
 label{
-  color: rgb(0, 0, 0);
-}
-input[type=file] {
   color: rgb(255, 255, 255);
-  padding:10px 16px;
+}
+
+/*input file*/
+.fileUpload {
+	background:#061f58d0;
   border: 2px solid rgb(255, 255, 255);
-  background:  transparent;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	color: #fff;
+	font-size: 1em;
+	font-weight: bold;
+	margin: 0.25em auto;/*20px/16px 0*/
+	overflow: hidden;
+	padding: 0.875em;/*14px/16px*/
+	position: relative;
+	text-align: center;
+	width: 120px;
+   cursor: pointer;
+  
+}
+.fileUpload:hover, .fileUpload:active, .fileUpload:focus {
+	background:#061f58d0;
+  cursor: pointer;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 148px;
+    height: 46px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+    position: fixed;
+    right: 100%;
+    bottom: 100%;
+}
+.custom-file-upload {
+    border: 1px solid #ffffff;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
 
 
-  }
 input[type=text] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(255, 255, 255);
   background: transparent;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
+
 .container {
   display: flex; 
   flex-direction: column; 
@@ -125,15 +170,15 @@ width: 100%;
   border-radius: 8px;
   border: none;
   
-  border: 2px solid rgb(0, 0, 0);
-  background:  transparent;
-  color: #000000;
+  border: 2px solid rgb(255, 255, 255);
+  background:#061f58d0;
+  color: #ffffff;
    font-weight: bold;
 
 }
 
 .btn_submit:hover {
-  background-color: #a6b1d3;
+  background:#061f58d0;
   color: white;
 }
 .submit{
@@ -152,7 +197,7 @@ footer {
  z-index: 999;
  position:relative;
 
- margin-top:27px;
+ margin-top:29px;
  bottom: 0;
  width: 100%;
  flex:​ 0 0 auto​;
