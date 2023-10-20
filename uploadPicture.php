@@ -42,7 +42,7 @@
                     <label for="image">拍一張這裡的照片：</label><br><br>
                     <input type="file" name="imgfile" data-target="preview_img" accept="image/gif,image/jpeg,image/png"
                         required="required"><br><br>
-                    <label for="image">預覽照片：</label><br><br>
+                    <label for="image" >預覽照片：</label><br><br>
                     <div>
                         <img class="preview_img" id="preview_img" src="#" width="250" />
                     </div>
