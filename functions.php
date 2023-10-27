@@ -44,18 +44,18 @@ else{
     
     //暫存位置'preview_img/'.$row["image_name"]
     $tmpname = $_FILES['imgfile']['tmp_name'];
-    list($width, $height) = getimagesize($tmpname);
-    $p=500/$width;
-    $new_width = $width*$p;
-    $new_height = $height*$p;
+//     list($width, $height) = getimagesize($tmpname);
+//     $p=500/$width;
+//     $new_width = $width*$p;
+//     $new_height = $height*$p;
 
-    $new_image = imagecreatetruecolor($new_width, $new_height);
-    $source=imagecreatefromjpeg($tmpname);
-    // copy and resize the image data from the original image into the new image
-    imagecopyresampled($new_image, $source, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
-    $filePlace='/uploads/'.$fileName;
-// output the new image as a JPEG file
-imagejpeg($new_image,$filePlace,$fileName);
+//     $new_image = imagecreatetruecolor($new_width, $new_height);
+//     $source=imagecreatefromjpeg($tmpname);
+//     // copy and resize the image data from the original image into the new image
+//     imagecopyresampled($new_image, $source, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+//     $filePlace='/uploads/'.$fileName;
+// // output the new image as a JPEG file
+// imagejpeg($new_image,$filePlace,$fileName);
     //檔案類型
     // $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
     $fileType = $_FILES["imgfile"]["type"];
@@ -70,7 +70,7 @@ imagejpeg($new_image,$filePlace,$fileName);
     }else{
         $newImageName=uniqid();
         $newImageName .= '.'. $imageExtension;
-        move_uploaded_file($filePlace,'Pimg/'.$newImageName);
+        move_uploaded_file($tmpname,'Pimg/'.$newImageName);
         // Insert image file name into database
             //新添加一筆資料(準備)
             $sql = "INSERT INTO person_data (
@@ -96,7 +96,7 @@ imagejpeg($new_image,$filePlace,$fileName);
 
                 //刪除目前第一筆資料
                 //echo $row['person_id'];
-                if ($row['person_id'] > 6) {
+                if ($row['person_id'] > 12) {
                     $sql = "SELECT person_id FROM person_data ORDER BY TIME LIMIT 1;";
                     $result = mysqli_query($dbConnection, $sql);
                     $row = mysqli_fetch_assoc($result);
