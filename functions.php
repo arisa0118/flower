@@ -122,12 +122,14 @@ else{
             $sql = "INSERT INTO person_data (
                 
                 `image_data`,
+                `image_size`, 
                 `image_name`, 
                 `image_type`,
                 `time`
                 ) VALUES (
                    
                     '{$newImageName}',
+                    '{$fileSize}',
                     '{$fileName}',
                     '{$fileType}',
                     '" . date('Y-m-d H:i:s') . "')";
