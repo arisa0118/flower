@@ -41,8 +41,8 @@
                 <div class="photo">
                     <label for="image">拍一張這裡的照片：</label><br><br>
                     <div class="fileUpload">
-                    <input type="file" name="imgfile" data-target="preview_img, upload(this)" accept="image/gif,image/jpeg,image/png"
-                        required="required" class="upload" >
+                    <input type="file" name="imgfile" data-target="preview_img" accept="image/gif,image/jpeg,image/png"
+                        required="required" class="upload" onchange="upload(this)">
                         <span>Upload</span>
                         </div><br><br>
                     <label for="image" >預覽照片：</label><br><br>
@@ -133,7 +133,7 @@
             //ajax传到后台处理
     }
     
- } 
+ } }
 
             </script>
 
