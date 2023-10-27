@@ -22,6 +22,29 @@ if ($_GET['op'] == 'createOrder') {
     createOrder();
 
 }
+function resize_image($file,$max_resolution){
+    if(file_exists($file)){
+    $source=imagecreatefromjpeg($file);
+    $width=imagesx($source);
+    $height=imagesy($source);
+    $p=$max_resolution/$width;
+    $new_width = $width*$p;
+    $new_height = $height*$p;
+
+    if($new_height>$max_resolution){
+        $p=$max_resolution/$height;
+    $new_width = $width*$p;
+    $new_height = $height*$p;
+    }
+    if($source){
+        $new_image = imagecreatetruecolor($new_width, $new_height);
+        imagecopyresampled($new_image, $source,0,0,0,0, $new_width, $new_height, $width, $height);
+        imagejpeg($new_image, $file,75);
+    }
+
+}
+
+}
 
 function createOrder()
 {
@@ -44,18 +67,12 @@ else{
     
     //暫存位置'preview_img/'.$row["image_name"]
     $tmpname = $_FILES['imgfile']['tmp_name'];
-//     list($width, $height) = getimagesize($tmpname);
-//     $p=500/$width;
-//     $new_width = $width*$p;
-//     $new_height = $height*$p;
+    //list($width, $height) = getimagesize($tmpname);
+    resize_image($tmpname,400);
 
-//     $new_image = imagecreatetruecolor($new_width, $new_height);
-//     $source=imagecreatefromjpeg($tmpname);
-//     // copy and resize the image data from the original image into the new image
-//     imagecopyresampled($new_image, $source, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
-//     $filePlace='/uploads/'.$fileName;
-// // output the new image as a JPEG file
-// imagejpeg($new_image,$filePlace,$fileName);
+  
+// output the new image as a JPEG file
+
     //檔案類型
     // $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
     $fileType = $_FILES["imgfile"]["type"];
