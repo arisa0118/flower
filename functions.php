@@ -55,7 +55,7 @@ else{
     imagecopyresampled($new_image, $source, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
     $filePlace='/uploads/'.$fileName;
 // output the new image as a JPEG file
-imagejpeg($new_image,$filePlace, 'resized/'.$fileName);
+imagejpeg($new_image,$filePlace,$fileName);
     //檔案類型
     // $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
     $fileType = $_FILES["imgfile"]["type"];
