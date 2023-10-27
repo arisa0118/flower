@@ -42,7 +42,7 @@
          
         </div> -->
         <div class="btn_Download">
-<button onclick="location.href='https://pvonq.zappar.io/4594993413743440733/10.0.3/'" >前往觀賞AR</button>
+<button onclick="location.href='https://pvonq.zappar.io/4501704514267303482/11.0.12/'" >前往觀賞AR</button>
        
         </div>
 
