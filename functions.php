@@ -50,12 +50,12 @@ else{
     $new_height = $height*$p;
 
     $new_image = imagecreatetruecolor($new_width, $new_height);
-$source=imagecreatefromjpeg($tmpname);
-// copy and resize the image data from the original image into the new image
-imagecopyresampled($new_image, $source, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
-
+    $source=imagecreatefromjpeg($tmpname);
+    // copy and resize the image data from the original image into the new image
+    imagecopyresampled($new_image, $source, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+    $filePlace='/uploads/'.$fileName;
 // output the new image as a JPEG file
-imagejpeg($new_image,$tmpname, 'resized/'.$fileName);
+imagejpeg($new_image,$filePlace, 'resized/'.$fileName);
     //檔案類型
     // $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
     $fileType = $_FILES["imgfile"]["type"];
