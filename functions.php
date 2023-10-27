@@ -22,7 +22,35 @@ if ($_GET['op'] == 'createOrder') {
     createOrder();
 
 }
+function getResize($source_w, $source_h, $inside_w, $inside_h)
+{
+    if ($source_w < $inside_w && $source_h < $inside_h) {
+        return 1; // Percent = 1, 如果都比預計縮圖的小就不用縮
+    }
 
+    $w_percent = $inside_w / $source_w;
+    $h_percent = $inside_h / $source_h;
+
+    return ($w_percent > $h_percent) ? $h_percent : $w_percent;
+}
+function ImageResize($from_filename, $save_filename, $in_width=400, $in_height=300, $quality=100)
+{
+    $allow_format = array('jpeg', 'png', 'gif');
+    $sub_name = $t = '';
+
+    // Get new dimensions
+    $img_info = getimagesize($from_filename);
+    $width    = $img_info['0'];
+    $height   = $img_info['1'];
+    $imgtype  = $img_info['2'];
+    $imgtag   = $img_info['3'];
+    $bits     = $img_info['bits'];
+    $channels = $img_info['channels'];
+    $mime     = $img_info['mime'];
+
+    imagejpeg($from_filename);
+
+}
 function createOrder()
 {
 
@@ -39,6 +67,20 @@ else{
     $fileName = $_FILES["imgfile"]["name"];
     $fileSize = $_FILES["imgfile"]["size"];
     // $fileSize =ImageResize($fileName, $fileName, 400, 300, 100);
+    // Get new sizes
+    list($width, $height) = getimagesize($fileName);
+    $percent = 400/$width;
+    $newwidth = $width * $percent;
+    $newheight = $height * $percent;
+    // Load
+    $fileName = imagecreatetruecolor($newwidth, $newheight);
+    $source = imagecreatefromjpeg($fileName);
+    // Resize
+    imagecopyresized($fileName, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
+    // Output
+    imagejpeg($fileName);
+
+
 
     
     //暫存位置'preview_img/'.$row["image_name"]
