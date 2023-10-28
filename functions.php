@@ -113,7 +113,7 @@ else{
 
                 //刪除目前第一筆資料
                 //echo $row['person_id'];
-                if ($row['person_id'] > 12) {
+                if ($row['person_id'] > 11) {
                     $sql = "SELECT person_id FROM person_data ORDER BY TIME LIMIT 1;";
                     $result = mysqli_query($dbConnection, $sql);
                     $row = mysqli_fetch_assoc($result);
