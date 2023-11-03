@@ -51,7 +51,9 @@ include('dbConnect.php');
         } 
         function button1() { 
             global $dbConnection;
-            $sql = "DELETE FROM person_data ;ALTER TABLE person_data AUTO_INCREMENT = 1;";
+            $sql = "DELETE FROM person_data ;";
+                $result = mysqli_query($dbConnection, $sql);
+                $sql = "ALTER TABLE person_data AUTO_INCREMENT = 1;";
                 $result = mysqli_query($dbConnection, $sql);
             echo "已全部清除";
         } 
@@ -62,8 +64,6 @@ include('dbConnect.php');
                     $row = mysqli_fetch_assoc($result);
                     $query2 = "DELETE FROM person_data WHERE person_id=" . $row['person_id'];
                     //刪資料夾照片
-                    $filepath="pimg/".$row['image_data'];
-                    unlink($filepath);
                     $query_run2 = mysqli_query($dbConnection, $query2);
             echo "已刪除最前面一筆";
             
