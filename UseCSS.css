@@ -127,12 +127,12 @@ li a:active {
   font-weight: bold;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0);
 }
-.btn_Download button:active {
+/* .btn_Download button:active {
   
   background-color: #0c1c34e3;
   color: #ffffff;
   border: 1px solid #ffffff;
-}
+} */
 
 
 
