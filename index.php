@@ -23,7 +23,7 @@ include('dbConnect.php');?>
 </div>	 -->
 <div class="main" id="main">
 
-    <img src="img\bg_3.PNG" width="100%" >
+    <img src="img\新黴菌系.gif" width="100%" >
 </div>
 <div class="main_text" id="main_text">
 <p> </p>
