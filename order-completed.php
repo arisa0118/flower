@@ -10,7 +10,7 @@
     <link rel="icon" href="img/Logo去背.png">
     <link href="UseCSS3.css" rel="stylesheet">
     <title>
-    日月草
+    新黴系
     </title>
 
 </head>
@@ -27,7 +27,7 @@
     <div class="main">
 
 
-<img src="img/bg_1_2.PNG" width="100%" >
+<img src="img/新黴菌系.gif" width="100%" >
 
 
    

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php 
-include('dbConnect.php');?>
+ include('dbConnect.php');?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@ include('dbConnect.php');?>
 	<link rel="icon" href="img/Logo去背.png">
 	<link href="UseCSS.css" rel="stylesheet">
 	<title>
-	日月草
+	新黴系
 
 	</title>
 	
@@ -31,7 +31,7 @@ include('dbConnect.php');?>
 </div>
 
 <div class="btn_Download">
-<button onclick="location.href='/uploadPicture.php'">前往上傳最美好的回憶</button>   
+<button onclick="location.href='/uploadPicture.php'">前往上傳</button>   
         </div>
 <footer>
 	

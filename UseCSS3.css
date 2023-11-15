@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url("img/新黴菌系.gif");
+  background-image: rgb(0, 0, 0);
   background-size: cover;
   height: 100%;
   overflow-x: hidden;
@@ -121,7 +121,7 @@ justify-content: center;
     display: flex;
     float: left;
     z-index: 600;
-    margin-top: -200px;
+    margin-top: -700px;
   }
   }
 .btn_Download button {
@@ -130,7 +130,6 @@ justify-content: center;
   padding: 14px 16px;
   justify-content: center;
   display: flex;
-  box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.438);
   background:  transparent;
   font-weight: bold;
   

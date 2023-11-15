@@ -9,7 +9,7 @@
     <link rel="icon" href="img/Logo去背.png">
     <link href="UseCSS2.css" rel="stylesheet">
     <title>
-    日月草
+    新黴系
     </title>
 
 </head>
@@ -43,15 +43,15 @@
                     <div class="fileUpload">
                     <input type="file" name="imgfile" data-target="preview_img" accept="image/jpeg"
                         required="required" class="upload" onchange="upload(this)">
-                        <span>Upload</span>
+                        <span>上傳</span>
                         </div><br><br>
                     <label for="image" >預覽照片：</label><br><br>
                     <div>
                         <img class="preview_img" id="preview_img" src="#" width="250" />
                     </div>
                     <br><br>
-                    <input type="checkbox" required="required" ><a style="color: rgb(255, 255, 255);">同意使用者條款</a><a href="/privatebook.php"
-                        style="font-size: 10px; color: rgb(195, 226, 255);">隱私權與條款細項</a><br><br>
+                    <input type="checkbox" required="required" ><a style="color: #101010;">同意使用者條款</a><a href="/privatebook.php"
+                        style="font-size: 10px; color: #101010;">隱私權與條款細項</a><br><br>
                 </div>
               <br>
                 <div class="submit">
