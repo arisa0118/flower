@@ -42,7 +42,7 @@
          
         </div> -->
         <div class="btn_Download">
-<button onclick="location.href='https://pvonq.zappar.io/4594993413743440733/13.0.10/'" >前往觀賞AR</button>
+<button onclick="location.href='https://drive.google.com/file/d/11b2SH_WKPRF-rlVGgJ-LtuEOFL5WhXbw/view?usp=drivesdk'" >前往下載app觀賞AR</button>
        
         </div>
 
